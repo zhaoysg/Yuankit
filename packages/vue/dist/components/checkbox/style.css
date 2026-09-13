@@ -1,0 +1,6 @@
+.yk-check { display:inline-flex;align-items:flex-start;gap:9px;font-size:14px;cursor:pointer; }
+.yk-check input { margin:3px 0 0;width:17px;height:17px;flex-shrink:0;accent-color:var(--yk-primary);cursor:inherit; }
+.yk-check input:focus-visible { outline:2px solid var(--yk-focus);outline-offset:3px; }
+.yk-check__copy { display:flex;flex-direction:column;gap:3px; }
+.yk-check small { color:var(--yk-text-muted);font-size:12px; }
+.yk-check--disabled { opacity:.5;cursor:not-allowed; }

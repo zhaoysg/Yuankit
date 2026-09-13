@@ -1,0 +1,2 @@
+import {defineComponent,h,mergeProps} from 'vue';
+export const YkToggle=defineComponent({name:'YkToggle',inheritAttrs:false,props:{pressed:{type:Boolean,default:false},disabled:Boolean},emits:['update:pressed','change'],setup(p,{attrs,slots,emit}){return()=>h('button',mergeProps(attrs,{type:'button',class:['yk-toggle',{'is-pressed':p.pressed}],disabled:p.disabled,'aria-pressed':String(p.pressed),onClick:()=>{const v=!p.pressed;emit('update:pressed',v);emit('change',v);}}),slots.default?.()??'切换');}});

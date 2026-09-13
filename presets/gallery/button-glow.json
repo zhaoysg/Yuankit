@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "button",
+  "settings": {
+    "primary": "#6750d8",
+    "foreground": "#ffffff",
+    "effect": "glow",
+    "shadow": 12
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

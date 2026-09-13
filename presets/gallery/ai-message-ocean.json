@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "ai-message",
+  "settings": {
+    "radius": 12,
+    "primary": "#175ba6",
+    "surface": "#f5f9ff",
+    "text": "#18283b",
+    "shadow": 8
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

@@ -1,0 +1,274 @@
+// Generated from references/inspiration-sources.json
+export default [
+  {
+    "id": "navbar",
+    "name": "Navbar Gallery",
+    "url": "https://www.navbar.gallery/",
+    "category": "页面区块",
+    "notes": "导航类别、下拉/侧栏/公告等结构分类",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "hero",
+    "name": "Supahero",
+    "url": "https://supahero.io/",
+    "category": "页面区块",
+    "notes": "首屏标题、说明、主辅操作的组合；不是可安装 Vue 包",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "cta",
+    "name": "CTA Gallery",
+    "url": "https://www.cta.gallery/",
+    "category": "页面区块",
+    "notes": "行动引导区域的布局与视觉层级",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "footer",
+    "name": "Footer Design",
+    "url": "https://www.footer.design/",
+    "category": "页面区块",
+    "notes": "页脚信息结构与分组",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "404",
+    "name": "404s Design",
+    "url": "https://www.404s.design/",
+    "category": "页面模板",
+    "notes": "错误页的排版与操作回路",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "motion",
+    "name": "60fps",
+    "url": "https://60fps.design/",
+    "category": "动效参考",
+    "notes": "动画类别与交互案例；本轮未逐条读取或下载案例视频",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "patterns",
+    "name": "IF Design Patterns Catalogue",
+    "url": "https://catalogue.projectsbyif.com/",
+    "category": "交互规范",
+    "notes": "透明说明、能力与限制、同意与撤销等可信交互模式",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "abtest",
+    "name": "AB Test Design",
+    "url": "https://abtest.design/",
+    "category": "设计案例",
+    "notes": "实验与案例入口；本轮未验证案例的原始统计数据",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "spells",
+    "name": "Design Spells",
+    "url": "https://designspells.com/",
+    "category": "动效参考",
+    "notes": "设计细节与微交互入口；未逐条复刻案例",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "ux",
+    "name": "UXSnaps",
+    "url": "https://www.uxsnaps.com/",
+    "category": "设计案例",
+    "notes": "产品 UI/UX 拆解入口；未逐条复核案例",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "playbook",
+    "name": "UI Playbook",
+    "url": "https://uiplaybook.dev/",
+    "category": "交互规范",
+    "notes": "组件实践与规则入口；仅核对站点入口",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; no third-party code, image or video imported"
+  },
+  {
+    "id": "storybook-controls",
+    "name": "Storybook Controls",
+    "url": "https://storybook.js.org/docs/essentials/controls",
+    "category": "参数工作台",
+    "notes": "借鉴 Args/Controls 的参数分组、实时反馈与可保存状态；不引入 Storybook 运行时。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-doc-reviewed",
+    "reuse": "interaction-pattern-reference only"
+  },
+  {
+    "id": "shadcn-theming",
+    "name": "shadcn/ui Theming",
+    "url": "https://ui.shadcn.com/docs/theming",
+    "category": "主题系统",
+    "notes": "借鉴语义 Token、全局圆角与主题预设思路；YuanKit 继续维护自己的 Vue Token。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-doc-reviewed",
+    "reuse": "design-system-reference only"
+  },
+  {
+    "id": "park-theming",
+    "name": "Park UI Theming",
+    "url": "https://park-ui.com/docs/theming",
+    "category": "主题系统",
+    "notes": "借鉴颜色配对、圆角层级和阴影层级的设计变量组织方式。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-doc-reviewed",
+    "reuse": "design-system-reference only"
+  },
+  {
+    "id": "shadcn-vue-registry",
+    "name": "shadcn/vue",
+    "url": "https://www.shadcn-vue.com/",
+    "category": "组件与分发",
+    "notes": "参考 open-code、组合式接口、registry/CLI 分发和 AI-ready 文档组织；不直接复制实现。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-doc-reviewed",
+    "reuse": "architecture-reference only"
+  },
+  {
+    "id": "reka-ui",
+    "name": "Reka UI",
+    "url": "https://reka-ui.com/docs/overview/introduction",
+    "category": "无样式基础组件",
+    "notes": "参考 accessibility-first、headless primitive 和渐进式集成思路；YuanKit 当前仍保留自己的组件 API。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-doc-reviewed",
+    "reuse": "interaction-architecture reference only"
+  },
+  {
+    "id": "shadcn-blocks",
+    "name": "shadcn/ui Blocks",
+    "url": "https://ui.shadcn.com/blocks",
+    "category": "页面区块",
+    "notes": "参考 Dashboard、Sidebar、Charts、Data Table 等“组件之上的可复用区块”分层。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-doc-reviewed",
+    "reuse": "information-architecture reference only"
+  },
+  {
+    "id": "shadcn-vue-2026",
+    "name": "shadcn/vue 2026 updates",
+    "url": "https://shadcn-vue.com/docs/changelog",
+    "category": "新鲜组件",
+    "notes": "参考 Typeset、Questionnaire、聊天界面、Drawer/Data Table 等近期扩展方向，用于 YuanKit backlog。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-changelog-reviewed",
+    "reuse": "roadmap-reference only"
+  },
+  {
+    "id": "origin-ui-vue",
+    "name": "Origin UI Vue",
+    "url": "https://www.originui-vue.com/",
+    "category": "Vue 组件变体",
+    "notes": "Vue 组件案例覆盖 Button、Input、Calendar、File upload、Navbar、Tree、Timeline 等大量变体；用于补充下一批组件与 preset 目录。",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "reference-only; inspect license before code reuse"
+  },
+  {
+    "id": "component-gallery",
+    "name": "The Component Gallery",
+    "url": "https://component.gallery/",
+    "category": "组件分类",
+    "notes": "跨多个设计系统的组件定义与案例索引，用于检查 YuanKit 是否漏掉 Carousel、Tree、Rating 等常见模式。",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "taxonomy-reference only"
+  },
+  {
+    "id": "motion-primitives",
+    "name": "Motion Primitives",
+    "url": "https://motion-primitives.com/",
+    "category": "动效组件",
+    "notes": "参考 motion component 的组织方式、触发策略和可复制配方；不直接引入 React/Motion 运行时。",
+    "checkedAt": "2026-09-12",
+    "verification": "official-site-reviewed",
+    "reuse": "motion-pattern reference only"
+  },
+  {
+    "id": "registry-directory",
+    "name": "registry.directory",
+    "url": "https://registry.directory/",
+    "category": "组件生态索引",
+    "notes": "跟踪 shadcn registry 生态中新组件、Blocks、动画和模板方向，作为后续调研入口而非自动导入源。",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "discovery-reference only"
+  },
+  {
+    "id": "vllnt-ai-ui",
+    "name": "VLLNT UI",
+    "url": "https://ui.vllnt.com/",
+    "category": "AI 界面组件",
+    "notes": "AI 应用的 chat、streaming、tool calls、citations、agents、artifacts 等组件分类，适合作为后续 AI 产品组件域。",
+    "checkedAt": "2026-09-12",
+    "verification": "homepage-reviewed",
+    "reuse": "roadmap-reference only"
+  },
+  {
+    "id": "ai-elements-vue",
+    "name": "AI Elements Vue",
+    "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+    "category": "AI 界面与交互",
+    "notes": "已读取 Conversation / Prompt Input 文档。参考分层、滚动跟随与输入状态；Vue 独立实现，未复制代码。",
+    "reviewedAt": "2026-09-12",
+    "scope": "specified-docs-only",
+    "codeReuse": false
+  },
+  {
+    "id": "ai-elements-tools",
+    "name": "AI Elements · Tool",
+    "url": "https://elements.ai-sdk.dev/components/tool",
+    "category": "AI 界面与交互",
+    "notes": "已读取工具状态展示文档。采纳状态与人工确认的 UI 分离；执行必须由后端授权。",
+    "reviewedAt": "2026-09-12",
+    "scope": "specified-docs-only",
+    "codeReuse": false
+  },
+  {
+    "id": "shadcn-message-scroller",
+    "name": "shadcn/vue · Message Scroller",
+    "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+    "category": "AI 界面与交互",
+    "notes": "已读取滚动行为说明；跟随底部但不抢占向上阅读，本版不支持分页历史锚定。",
+    "reviewedAt": "2026-09-12",
+    "scope": "specified-docs-only",
+    "codeReuse": false
+  },
+  {
+    "id": "vllnt-conversation",
+    "name": "VLLNT UI · Conversation Thread",
+    "url": "https://ui.vllnt.com/components/conversation-thread",
+    "category": "AI 界面与交互",
+    "notes": "已读取会话分层与状态接口说明。参考范围仅文档；不移植 React 实现。",
+    "reviewedAt": "2026-09-12",
+    "scope": "specified-docs-only",
+    "codeReuse": false
+  }
+]
+;

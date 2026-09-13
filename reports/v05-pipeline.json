@@ -1,0 +1,17 @@
+[
+  {
+    "suite": "original",
+    "exitCode": 0,
+    "seconds": 57.5
+  },
+  {
+    "suite": "studio",
+    "exitCode": 0,
+    "seconds": 71.1
+  },
+  {
+    "suite": "v05",
+    "exitCode": 0,
+    "seconds": 64.4
+  }
+]

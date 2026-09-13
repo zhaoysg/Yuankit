@@ -1,0 +1,6 @@
+.yk-input-wrap { display:flex;align-items:center;gap:8px;min-height:var(--yk-control-height);padding:0 var(--yk-control-padding);border:1px solid var(--yk-border);background:var(--yk-field-background);border-radius:var(--yk-radius-control);transition:box-shadow var(--yk-duration),border-color var(--yk-duration); }
+.yk-input-wrap:focus-within { border-color:var(--yk-primary);outline:2px solid var(--yk-focus);outline-offset:2px; }
+.yk-input { border:0;outline:0;min-width:0;width:100%;padding:8px 0;background:transparent;color:var(--yk-text);font:inherit;line-height:1.4; }
+.yk-input::placeholder { color:var(--yk-text-muted);opacity:.85; }
+.yk-field--error .yk-input-wrap { border-color:var(--yk-danger); }
+.yk-field__adornment { display:flex;align-items:center;color:var(--yk-text-muted);flex:none; }

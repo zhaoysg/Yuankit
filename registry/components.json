@@ -1,0 +1,3737 @@
+[
+  {
+    "id": "button",
+    "name": "YkButton",
+    "title": "按钮",
+    "category": "基础",
+    "summary": "清晰的操作层级，从主要动作到安静的辅助操作。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/button/index.js",
+    "style": "packages/vue/src/components/button/style.css",
+    "types": "packages/vue/src/components/button/index.d.ts",
+    "spec": "references/components/button.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "variant",
+        "type": "'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'",
+        "default": "primary",
+        "description": "操作外观；一个操作区域建议只有一个主要动作。"
+      },
+      {
+        "name": "size",
+        "type": "Size",
+        "default": "继承 ConfigProvider.size",
+        "description": "单个组件尺寸，优先于全局默认。"
+      },
+      {
+        "name": "type",
+        "type": "'button' | 'submit' | 'reset'",
+        "default": "button",
+        "description": "原生按钮类型；不会意外提交表单。"
+      },
+      {
+        "name": "loading",
+        "type": "boolean",
+        "default": "false",
+        "description": "加载时禁用点击，并提供忙碌语义。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用鼠标及键盘激活。"
+      },
+      {
+        "name": "block",
+        "type": "boolean",
+        "default": "false",
+        "description": "铺满可用宽度。"
+      },
+      {
+        "name": "iconOnly",
+        "type": "boolean",
+        "default": "false",
+        "description": "方形图标按钮；调用方必须提供 aria-label。"
+      }
+    ],
+    "slots": [
+      "default",
+      "leading",
+      "trailing"
+    ],
+    "events": [
+      {
+        "name": "click",
+        "payload": "MouseEvent"
+      }
+    ],
+    "structure": "button → loading/leading + label + trailing；加载文案为读屏辅助节点。",
+    "visual": "primary/secondary/outline/ghost/danger × sm/md/lg；default、hover、active、focus-visible、disabled、loading。",
+    "rules": [
+      "Enter 与 Space 由原生 button 激活。",
+      "loading 和 disabled 均阻止 click；type 默认为 button。",
+      "文字允许换行；纯图标按钮必须指定可访问名称。"
+    ],
+    "limitations": [
+      "不实现 antd 的 href、波纹、中文自动空格、延迟加载；链接请使用原生 a。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/button/",
+        "verification": "reviewed"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/button",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "input",
+    "name": "YkInput",
+    "title": "输入框",
+    "category": "表单",
+    "summary": "稳定的文本绑定、前后缀和清晰的校验反馈。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/input/index.js",
+    "style": "packages/vue/src/components/input/style.css",
+    "types": "packages/vue/src/components/input/index.d.ts",
+    "spec": "references/components/input.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "受控值，通过 v-model 双向绑定。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "default": "''",
+        "description": "非受控初始值；只在初始化时读取。"
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "default": "自动生成",
+        "description": "输入元素 ID；不放到外层容器。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "undefined",
+        "description": "可见标签；缺省时必须传 aria-label。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "辅助说明，加入 aria-describedby。"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "default": "undefined",
+        "description": "错误内容；展示错误样式和 aria-invalid。"
+      },
+      {
+        "name": "size",
+        "type": "Size",
+        "default": "继承 ConfigProvider.size",
+        "description": "单个组件尺寸，优先于全局默认。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用。"
+      },
+      {
+        "name": "readonly",
+        "type": "boolean",
+        "default": "false",
+        "description": "只读，不显示清空操作。"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "false",
+        "description": "原生必填约束。"
+      },
+      {
+        "name": "clearable",
+        "type": "boolean",
+        "default": "false",
+        "description": "允许清空并将焦点返回输入框。"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "default": "text",
+        "description": "原生 input 类型；值保持字符串，不做数字解析。"
+      }
+    ],
+    "slots": [
+      "leading",
+      "trailing"
+    ],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "string"
+      },
+      {
+        "name": "change",
+        "payload": "string"
+      },
+      {
+        "name": "clear",
+        "payload": "void"
+      }
+    ],
+    "structure": "field → label + input-wrap(leading/input/clear/trailing) + description + error。",
+    "visual": "默认、聚焦、已填、清空、错误、禁用、只读；三种尺寸。",
+    "rules": [
+      "placeholder/name/autocomplete/aria-* 透传到真实 input。",
+      "中文输入法组合期间不向 model 提交半成品，compositionend 后提交。",
+      "error 不替代 description；两者同时关联到输入控件。"
+    ],
+    "limitations": [
+      "不含 OTP、密码眼睛、远程搜索和自动校验引擎。",
+      "数字输入仍返回 string；业务自行解析和验证。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/input/",
+        "verification": "reviewed"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/text-field",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "textarea",
+    "name": "YkTextarea",
+    "title": "文本域",
+    "category": "表单",
+    "summary": "多行编辑、字数统计与说明信息。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/textarea/index.js",
+    "style": "packages/vue/src/components/textarea/style.css",
+    "types": "packages/vue/src/components/textarea/index.d.ts",
+    "spec": "references/components/textarea.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "受控文本。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "default": "''",
+        "description": "非受控初始文本。"
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "default": "自动生成",
+        "description": "输入元素 ID。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "undefined",
+        "description": "可见标签；否则传 aria-label。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "辅助说明。"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "default": "undefined",
+        "description": "错误内容。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用。"
+      },
+      {
+        "name": "readonly",
+        "type": "boolean",
+        "default": "false",
+        "description": "只读。"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "false",
+        "description": "原生必填。"
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "default": "4",
+        "description": "初始行数。"
+      },
+      {
+        "name": "maxlength",
+        "type": "number",
+        "default": "undefined",
+        "description": "原生 UTF-16 码元长度上限。"
+      },
+      {
+        "name": "showCount",
+        "type": "boolean",
+        "default": "false",
+        "description": "展示与 maxlength 一致的 UTF-16 码元计数。"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "string"
+      },
+      {
+        "name": "change",
+        "payload": "string"
+      }
+    ],
+    "structure": "field → label + textarea + count + description + error。",
+    "visual": "正常、错误、禁用、只读、可拉伸；文本不溢出容器。",
+    "rules": [
+      "遵守原生 textarea 的换行及键盘规则。",
+      "中文组合输入与 Input 一致。",
+      "计数与原生 maxlength 口径一致，emoji 可能占两个码元。"
+    ],
+    "limitations": [
+      "不含自动高度和富文本；允许用户垂直拖动调整高度。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/input/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/text-area",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "select",
+    "name": "YkSelect",
+    "title": "选择器",
+    "category": "表单",
+    "summary": "单选列表，保留系统级键盘与移动端选择体验。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/select/index.js",
+    "style": "packages/vue/src/components/select/style.css",
+    "types": "packages/vue/src/components/select/index.d.ts",
+    "spec": "references/components/select.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "受控选中值。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "default": "''",
+        "description": "非受控初始值。"
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "default": "自动生成",
+        "description": "控件 ID。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "undefined",
+        "description": "可见标签，否则传 aria-label。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "辅助说明。"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "default": "undefined",
+        "description": "错误说明。"
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "default": "按 locale",
+        "description": "未选择时提示。"
+      },
+      {
+        "name": "size",
+        "type": "Size",
+        "default": "继承 ConfigProvider.size",
+        "description": "单个组件尺寸，优先于全局默认。"
+      },
+      {
+        "name": "options",
+        "type": "Option[]",
+        "default": "[]",
+        "description": "唯一非空 string value；空字符串保留给未选状态。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用。"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "false",
+        "description": "原生必选约束。"
+      },
+      {
+        "name": "clearable",
+        "type": "boolean",
+        "default": "false",
+        "description": "允许重新选择空占位选项。"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "string"
+      },
+      {
+        "name": "change",
+        "payload": "string"
+      }
+    ],
+    "structure": "field → label + select-wrap(select/option + 装饰箭头) + description/error。",
+    "visual": "选择框外观统一；弹出的选项菜单使用操作系统原生外观。",
+    "rules": [
+      "方向键、字符查找、Enter 与移动端选择由原生 select 处理。",
+      "不把系统选项面板说成可像素级换肤。",
+      "name、autocomplete、aria-* 透传到 select。"
+    ],
+    "limitations": [
+      "只支持单选字符串；不含搜索、多选、远程分页、虚拟列表。",
+      "不是 antd/HeroUI 自定义 listbox 的完整重写。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/select/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/select",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "checkbox",
+    "name": "YkCheckbox",
+    "title": "复选框",
+    "category": "表单",
+    "summary": "二元选择与半选状态，保留原生表单行为。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/checkbox/index.js",
+    "style": "packages/vue/src/components/checkbox/style.css",
+    "types": "packages/vue/src/components/checkbox/index.d.ts",
+    "spec": "references/components/checkbox.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "boolean",
+        "default": "undefined",
+        "description": "受控选中状态。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "boolean",
+        "default": "false",
+        "description": "非受控初始状态。"
+      },
+      {
+        "name": "indeterminate",
+        "type": "boolean",
+        "default": "false",
+        "description": "原生 DOM 半选状态；父组件负责联动。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用。"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "false",
+        "description": "原生必填约束。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "undefined",
+        "description": "文字标签，也可使用 default 插槽。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "辅助说明。"
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "default": "自动生成",
+        "description": "控件 ID。"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "undefined",
+        "description": "原生表单字段名。"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "default": "on",
+        "description": "FormData 中选中时提交的值。"
+      }
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "boolean"
+      },
+      {
+        "name": "change",
+        "payload": "boolean"
+      }
+    ],
+    "structure": "label → input[type=checkbox] + 文案/说明。",
+    "visual": "未选、选中、半选、聚焦、禁用。",
+    "rules": [
+      "Space 切换；点击标签也会激活控件。",
+      "仅选中时参与原生 FormData。",
+      "indeterminate 不代表业务三态值，选中值仍为 boolean。"
+    ],
+    "limitations": [
+      "首版不包含自动管理数组的 CheckboxGroup；用业务组合控制。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/checkbox/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/checkbox",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "switch",
+    "name": "YkSwitch",
+    "title": "开关",
+    "category": "表单",
+    "summary": "立即生效的设置项，强调开与关的状态。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/switch/index.js",
+    "style": "packages/vue/src/components/switch/style.css",
+    "types": "packages/vue/src/components/switch/index.d.ts",
+    "spec": "references/components/switch.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "boolean",
+        "default": "undefined",
+        "description": "受控开关值。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "boolean",
+        "default": "false",
+        "description": "非受控初始值。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "undefined",
+        "description": "标签文字。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "状态说明。"
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "default": "自动生成",
+        "description": "控件 ID。"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "undefined",
+        "description": "原生表单字段名。"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "default": "on",
+        "description": "FormData 提交值。"
+      }
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "boolean"
+      },
+      {
+        "name": "change",
+        "payload": "boolean"
+      }
+    ],
+    "structure": "label → 原生 checkbox[role=switch] + track/thumb + 文案。",
+    "visual": "关闭、开启、聚焦、禁用；提供减少动效模式。",
+    "rules": [
+      "Space 切换；保持原生输入焦点和表单语义。",
+      "仅视觉轨道隐藏输入外观，不将真实 input 从可访问树移除。"
+    ],
+    "limitations": [
+      "没有内置异步 loading；业务通过 disabled 防止重复操作。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/switch/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/switch",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "radio-group",
+    "name": "YkRadioGroup",
+    "title": "单选组",
+    "category": "表单",
+    "summary": "同组互斥选择，自动关联名称与选项。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/radio-group/index.js",
+    "style": "packages/vue/src/components/radio-group/style.css",
+    "types": "packages/vue/src/components/radio-group/index.d.ts",
+    "spec": "references/components/radio-group.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "受控值。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "default": "''",
+        "description": "非受控初始值。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "required",
+        "description": "fieldset 的 legend。"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "自动生成",
+        "description": "一组原生 radio 的共享 name。"
+      },
+      {
+        "name": "options",
+        "type": "Option[]",
+        "default": "[]",
+        "description": "唯一非空字符串 value、label、disabled。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用整组。"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "false",
+        "description": "至少选择一个。"
+      },
+      {
+        "name": "orientation",
+        "type": "'horizontal' | 'vertical'",
+        "default": "horizontal",
+        "description": "布局方向，不改原生键盘行为。"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "string"
+      },
+      {
+        "name": "change",
+        "payload": "string"
+      }
+    ],
+    "structure": "fieldset → legend + 多个 label/input[type=radio]。",
+    "visual": "未选、选中、禁用；横向与纵向。",
+    "rules": [
+      "同组键盘方向键切换由浏览器处理。",
+      "使用 name 保证表单和互斥行为；不同实例的自动 name 不冲突。"
+    ],
+    "limitations": [
+      "不含按钮式 Radio 和自定义 HTML 选项。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/radio/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/radio-group",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "dialog",
+    "name": "YkDialog",
+    "title": "对话框",
+    "category": "反馈",
+    "summary": "基于原生顶层弹窗的受控交互与焦点管理。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/dialog/index.js",
+    "style": "packages/vue/src/components/dialog/style.css",
+    "types": "packages/vue/src/components/dialog/index.d.ts",
+    "spec": "references/components/dialog.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "default": "undefined",
+        "description": "v-model:open；undefined 使用内部状态。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "boolean",
+        "default": "false",
+        "description": "非受控初始打开状态。"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "required",
+        "description": "对话框可访问名称。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "补充描述。"
+      },
+      {
+        "name": "size",
+        "type": "'sm' | 'md' | 'lg'",
+        "default": "md",
+        "description": "最大宽度 400/520/760px；手机自动收缩。"
+      },
+      {
+        "name": "closeOnEscape",
+        "type": "boolean",
+        "default": "true",
+        "description": "Esc 是否请求关闭。"
+      },
+      {
+        "name": "closeOnBackdrop",
+        "type": "boolean",
+        "default": "true",
+        "description": "点击遮罩是否请求关闭。"
+      },
+      {
+        "name": "showClose",
+        "type": "boolean",
+        "default": "true",
+        "description": "显示标题区关闭按钮。"
+      }
+    ],
+    "slots": [
+      "trigger({ open })",
+      "default({ close })",
+      "footer({ close })"
+    ],
+    "events": [
+      {
+        "name": "update:open",
+        "payload": "boolean"
+      },
+      {
+        "name": "afterOpen",
+        "payload": "void"
+      },
+      {
+        "name": "afterClose",
+        "payload": "void"
+      }
+    ],
+    "structure": "trigger slot + dialog → header(title/description/close) + scrollable body + footer。",
+    "visual": "隐藏、打开、小/中/大、长内容滚动；原生 top-layer 遮罩。",
+    "rules": [
+      "使用 showModal，而不是仅设置 open 属性；背景变为不可交互。",
+      "Esc/遮罩先发出关闭请求，受控模式由父组件更新 open。",
+      "关闭恢复触发前焦点；长内容只滚动弹窗 body。",
+      "禁止没有 title 的无名弹窗；原生 dialog 支持是运行前提。"
+    ],
+    "limitations": [
+      "不含拖动、静态方法和自定义 overlay portal；不使用兼容老浏览器的 polyfill。",
+      "dialog 同一实例不同时混用 DOM showModal 与组件 open API。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/modal/",
+        "verification": "reviewed"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/modal",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "name": "YkTabs",
+    "title": "选项卡",
+    "category": "导航",
+    "summary": "可键盘切换的局部内容分组。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/tabs/index.js",
+    "style": "packages/vue/src/components/tabs/style.css",
+    "types": "packages/vue/src/components/tabs/index.d.ts",
+    "spec": "references/components/tabs.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "受控激活 value。"
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "default": "''",
+        "description": "非受控初始项；未指定时使用第一个可用项。"
+      },
+      {
+        "name": "items",
+        "type": "TabItem[]",
+        "default": "[]",
+        "description": "唯一 value、label、disabled、可选纯文本 content。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "选项卡",
+        "description": "tablist 的可访问名称。"
+      },
+      {
+        "name": "activation",
+        "type": "'automatic' | 'manual'",
+        "default": "automatic",
+        "description": "方向键自动激活或仅移动焦点。"
+      },
+      {
+        "name": "variant",
+        "type": "'soft' | 'line'",
+        "default": "soft",
+        "description": "分段背景或线条外观。"
+      }
+    ],
+    "slots": [
+      "[item.value]"
+    ],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "string"
+      },
+      {
+        "name": "change",
+        "payload": "string"
+      }
+    ],
+    "structure": "tablist → tabs；同级多个 tabpanel，非活动面板 hidden。",
+    "visual": "默认、激活、焦点、禁用；soft/line。",
+    "rules": [
+      "左右方向键循环跳过禁用项；Home/End 到首尾。",
+      "manual 时方向键不切内容；Enter/Space 激活。",
+      "tab 与 panel 使用生成 ID 相互关联；面板保留挂载以保存内部状态。"
+    ],
+    "limitations": [
+      "首版只实现水平键盘导航；不含拖动排序和可关闭标签。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/tabs/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/tabs",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "tooltip",
+    "name": "YkTooltip",
+    "title": "文字提示",
+    "category": "反馈",
+    "summary": "为已有标签补充简短说明，而不是承载交互表单。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/tooltip/index.js",
+    "style": "packages/vue/src/components/tooltip/style.css",
+    "types": "packages/vue/src/components/tooltip/index.d.ts",
+    "spec": "references/components/tooltip.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "text",
+        "type": "string",
+        "default": "required",
+        "description": "纯文本提示。"
+      },
+      {
+        "name": "delay",
+        "type": "number",
+        "default": "300",
+        "description": "显示延迟，单位毫秒。"
+      }
+    ],
+    "slots": [
+      "default({ attrs })"
+    ],
+    "events": [],
+    "structure": "inline trigger wrapper + Portal 提示节点[role=tooltip]。",
+    "visual": "隐藏、hover/focus 展示；靠近视口边缘时调整位置。",
+    "rules": [
+      "触发节点必须可聚焦，并绑定插槽提供的 attrs。",
+      "移入提示文字本身保持可见；Esc 关闭。",
+      "滚动/resize 后重定位；卸载清理计时器与事件。"
+    ],
+    "limitations": [
+      "只支持纯文本说明，不允许提示内按钮或表单。",
+      "不应依赖 tooltip 提供移动端唯一关键说明。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/tooltip/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/tooltip",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "badge",
+    "name": "YkBadge",
+    "title": "状态标签",
+    "category": "展示",
+    "summary": "文字、颜色与可选状态点共同表达状态。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/badge/index.js",
+    "style": "packages/vue/src/components/badge/style.css",
+    "types": "packages/vue/src/components/badge/index.d.ts",
+    "spec": "references/components/badge.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "tone",
+        "type": "'neutral' | 'primary' | 'success' | 'warning' | 'danger'",
+        "default": "neutral",
+        "description": "语义色。"
+      },
+      {
+        "name": "variant",
+        "type": "'soft' | 'outline'",
+        "default": "soft",
+        "description": "浅色背景或描边。"
+      },
+      {
+        "name": "dot",
+        "type": "boolean",
+        "default": "false",
+        "description": "增加装饰性状态点。"
+      }
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "span → 可选装饰点 + 文字内容。",
+    "visual": "五个语义色 × 两种外观；胶囊形态。",
+    "rules": [
+      "不能仅依赖颜色区分状态；必须给出可读文本。",
+      "状态点对读屏隐藏，避免重复播报。"
+    ],
+    "limitations": [
+      "这是 Tag/Chip 类标签，不含数量角标和可删除标签。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/tag/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/chip",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "name": "YkCard",
+    "title": "卡片",
+    "category": "展示",
+    "summary": "统一内容、页眉与操作区的组合容器。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/card/index.js",
+    "style": "packages/vue/src/components/card/style.css",
+    "types": "packages/vue/src/components/card/index.d.ts",
+    "spec": "references/components/card.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "undefined",
+        "description": "默认 h3 标题；复杂标题通过 header 插槽控制层级。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "undefined",
+        "description": "说明文字。"
+      },
+      {
+        "name": "as",
+        "type": "'section' | 'article' | 'div'",
+        "default": "section",
+        "description": "根节点语义。"
+      },
+      {
+        "name": "variant",
+        "type": "'outlined' | 'elevated'",
+        "default": "outlined",
+        "description": "描边或阴影。"
+      }
+    ],
+    "slots": [
+      "header",
+      "default",
+      "footer"
+    ],
+    "events": [],
+    "structure": "section/article/div → header + body + footer。",
+    "visual": "柔和/紧凑圆角；outlined/elevated。",
+    "rules": [
+      "Card 本身不模拟 button；跳转使用内部 a 或按钮。",
+      "使用 header 插槽时由业务负责正确的标题层级。"
+    ],
+    "limitations": [
+      "不含内置整卡点击、加载骨架、选择状态。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/card/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/card",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "alert",
+    "name": "YkAlert",
+    "title": "消息提示",
+    "category": "反馈",
+    "summary": "页面内的说明、成功反馈和错误信息。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/alert/index.js",
+    "style": "packages/vue/src/components/alert/style.css",
+    "types": "packages/vue/src/components/alert/index.d.ts",
+    "spec": "references/components/alert.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "tone",
+        "type": "'primary' | 'success' | 'warning' | 'danger'",
+        "default": "primary",
+        "description": "语义色；danger 使用 alert，其余使用 status。"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "undefined",
+        "description": "可选标题。"
+      },
+      {
+        "name": "dismissible",
+        "type": "boolean",
+        "default": "false",
+        "description": "允许关闭；重新挂载可重置可见状态。"
+      }
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [
+      {
+        "name": "dismiss",
+        "payload": "void"
+      }
+    ],
+    "structure": "容器 → 装饰图标 + 标题/正文 + 关闭按钮。",
+    "visual": "四类语义、单行/多行、可关闭。",
+    "rules": [
+      "关闭按钮有可访问名称。",
+      "错误通过文字说明，不只靠红色。"
+    ],
+    "limitations": [
+      "页面内组件，不是全局 toast 系统；没有自动消失计时器。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/alert/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/alert",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "avatar",
+    "name": "YkAvatar",
+    "title": "头像",
+    "category": "展示",
+    "summary": "图片与可预测的文字降级。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/avatar/index.js",
+    "style": "packages/vue/src/components/avatar/style.css",
+    "types": "packages/vue/src/components/avatar/index.d.ts",
+    "spec": "references/components/avatar.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "default": "required",
+        "description": "可访问名称和文字降级来源。"
+      },
+      {
+        "name": "src",
+        "type": "string",
+        "default": "undefined",
+        "description": "图片 URL；由调用方保证来源可信。"
+      },
+      {
+        "name": "size",
+        "type": "'sm' | 'md' | 'lg'",
+        "default": "md",
+        "description": "28/40/56px。"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "structure": "span[role=img,aria-label] → img 或前两个 Unicode 码点。",
+    "visual": "正常图片、缺图、错误降级；三种尺寸。",
+    "rules": [
+      "图片错误自动退回文字；src 改变后重新尝试。",
+      "外层统一提供名称，内层 img 不重复播报。"
+    ],
+    "limitations": [
+      "使用前两个 Unicode 码点，不是复杂语种姓名缩写规则。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/avatar/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/avatar",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "separator",
+    "name": "YkSeparator",
+    "title": "分隔线",
+    "category": "基础",
+    "summary": "克制地区分内容层次。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/separator/index.js",
+    "style": "packages/vue/src/components/separator/style.css",
+    "types": "packages/vue/src/components/separator/index.d.ts",
+    "spec": "references/components/separator.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "orientation",
+        "type": "'horizontal' | 'vertical'",
+        "default": "horizontal",
+        "description": "水平或垂直。"
+      },
+      {
+        "name": "decorative",
+        "type": "boolean",
+        "default": "true",
+        "description": "true 使用 role=none；false 提供 separator 语义。"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "structure": "单个 div 分隔元素。",
+    "visual": "单像素线条，水平留白或垂直间距。",
+    "rules": [
+      "纯装饰线不制造多余读屏噪音。",
+      "非装饰时提供方向语义。"
+    ],
+    "limitations": [
+      "不含可拖动分割布局或分隔线标题。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/divider/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/separator",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "progress",
+    "name": "YkProgress",
+    "title": "进度条",
+    "category": "反馈",
+    "summary": "确定与不确定进度的统一反馈。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/progress/index.js",
+    "style": "packages/vue/src/components/progress/style.css",
+    "types": "packages/vue/src/components/progress/index.d.ts",
+    "spec": "references/components/progress.md",
+    "evidenceLevel": "reference",
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "default": "undefined",
+        "description": "进度值；undefined 为不确定进度。"
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "default": "100",
+        "description": "最大值；非正/非有限值回退为100。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "required",
+        "description": "可见名称和 progressbar 的 accessible name。"
+      },
+      {
+        "name": "showValue",
+        "type": "boolean",
+        "default": "true",
+        "description": "展示百分比。"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "structure": "heading(label/percentage) + track[role=progressbar] → bar。",
+    "visual": "0–100%、超界夹取、不确定动效、减少动效。",
+    "rules": [
+      "value 被夹取到 [0,max]；无穷和 NaN 回退到0。",
+      "不确定进度不设置 aria-valuenow，避免假精确。"
+    ],
+    "limitations": [
+      "不含环形、步骤分段和自定义渐变。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design",
+        "url": "https://ant.design/components/progress/",
+        "verification": "reference"
+      },
+      {
+        "name": "HeroUI v3",
+        "url": "https://heroui.com/en/docs/react/components/progress-bar",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "config-provider",
+    "name": "YkConfigProvider",
+    "title": "配置容器",
+    "category": "基础",
+    "summary": "一个入口管理外观、行为默认值和作用域。",
+    "status": "beta",
+    "since": "0.1.0",
+    "source": "packages/vue/src/components/config-provider/index.js",
+    "style": "packages/vue/src/components/config-provider/style.css",
+    "types": "packages/vue/src/components/config-provider/index.d.ts",
+    "spec": "references/components/config-provider.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "skin",
+        "type": "'soft' | 'precise'",
+        "default": "soft / 继承",
+        "description": "形状与层次；不是两个第三方库的 runtime。"
+      },
+      {
+        "name": "mode",
+        "type": "'light' | 'dark'",
+        "default": "light / 继承",
+        "description": "亮/暗主题。"
+      },
+      {
+        "name": "density",
+        "type": "'comfortable' | 'compact'",
+        "default": "comfortable / 继承",
+        "description": "控件高度与容器间距。"
+      },
+      {
+        "name": "size",
+        "type": "'sm' | 'md' | 'lg'",
+        "default": "md / 继承",
+        "description": "按钮、输入框、选择器的默认尺寸。"
+      },
+      {
+        "name": "motion",
+        "type": "boolean",
+        "default": "true / 继承",
+        "description": "减少动效；也尊重系统 prefers-reduced-motion。"
+      },
+      {
+        "name": "locale",
+        "type": "'zh-CN' | 'en-US'",
+        "default": "zh-CN / 继承",
+        "description": "内建关闭、清空等文案，不自动翻译业务文案。"
+      },
+      {
+        "name": "tokens",
+        "type": "Partial<Record<TokenName, string>>",
+        "default": "{} / 合并继承",
+        "description": "经过白名单校验的 CSS 变量覆盖。"
+      }
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "div.yk-theme + Vue provide/inject；作用域内组件消费配置。",
+    "visual": "两种 skin × 两种 mode × 两种 density；tokens 支持局部覆盖。",
+    "rules": [
+      "继承父配置，只有显式传入的值覆盖父层。",
+      "全局默认 < 外层Provider < 内层Provider < 单组件行为Props。",
+      "视觉CSS：预设变量 < Provider内联tokens < 消费方明确CSS覆盖。",
+      "增加 token 后 build 会同步 token-key 白名单；未知 token 抛错。"
+    ],
+    "limitations": [
+      "不内置自动跟随系统明暗；业务可通过 matchMedia 映射 mode。",
+      "插件注册不自动创建主题容器，页面根部仍需 Provider。"
+    ],
+    "references": [
+      {
+        "name": "Ant Design tokens",
+        "url": "https://ant.design/docs/react/customize-theme/",
+        "verification": "reviewed"
+      },
+      {
+        "name": "HeroUI theming",
+        "url": "https://heroui.com/en/docs/react/getting-started/theming",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "slider",
+    "name": "YkSlider",
+    "title": "滑块",
+    "category": "表单",
+    "summary": "连续数值调节，带键盘与数值反馈。",
+    "status": "beta",
+    "since": "0.2.0",
+    "source": "packages/vue/src/components/slider/index.js",
+    "style": "packages/vue/src/components/slider/style.css",
+    "types": "packages/vue/src/components/slider/index.d.ts",
+    "spec": "references/components/slider.md",
+    "evidenceLevel": "independent-implementation",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "number",
+        "default": "undefined",
+        "description": "受控值；使用 v-model。"
+      },
+      {
+        "name": "min",
+        "type": "number",
+        "default": "0",
+        "description": "最小值。"
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "default": "100",
+        "description": "最大值。"
+      },
+      {
+        "name": "step",
+        "type": "number",
+        "default": "1",
+        "description": "正数步长。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "必填",
+        "description": "可访问名称。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "阻止调整。"
+      },
+      {
+        "name": "unit",
+        "type": "string",
+        "default": "空字符串",
+        "description": "显示单位。"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见类型与实现"
+      },
+      {
+        "name": "change",
+        "payload": "见类型与实现"
+      }
+    ],
+    "structure": "label + output + input[type=range]",
+    "visual": "使用统一品牌、前景、圆角和间距变量；工作台按实际能力暴露可调参数。",
+    "rules": [
+      "原生范围键盘操作；禁用不触发变更。"
+    ],
+    "limitations": [
+      "当前只支持单滑块；滑块形状跟随浏览器，没有双端范围选择。"
+    ],
+    "references": [
+      {
+        "name": "Vue 官方组件属性",
+        "url": "https://cn.vuejs.org/guide/components/attrs",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "name": "YkAccordion",
+    "title": "折叠面板",
+    "category": "展示",
+    "summary": "将长内容分组展开，而不丢失清晰层级。",
+    "status": "beta",
+    "since": "0.2.0",
+    "source": "packages/vue/src/components/accordion/index.js",
+    "style": "packages/vue/src/components/accordion/style.css",
+    "types": "packages/vue/src/components/accordion/index.d.ts",
+    "spec": "references/components/accordion.md",
+    "evidenceLevel": "independent-implementation",
+    "props": [
+      {
+        "name": "items",
+        "type": "AccordionItem[]",
+        "default": "[]",
+        "description": "唯一 value、标题、内容与禁用状态。"
+      },
+      {
+        "name": "modelValue",
+        "type": "string[]",
+        "default": "undefined",
+        "description": "已展开的 value。"
+      },
+      {
+        "name": "multiple",
+        "type": "boolean",
+        "default": "false",
+        "description": "允许多个面板同时展开。"
+      }
+    ],
+    "slots": [
+      "[item.value]"
+    ],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见类型与实现"
+      }
+    ],
+    "structure": "section → h3/button + hidden panel",
+    "visual": "使用统一品牌、前景、圆角和间距变量；工作台按实际能力暴露可调参数。",
+    "rules": [
+      "按钮 Enter/Space 展开与收起；aria-expanded 和 aria-controls 与面板关联。"
+    ],
+    "limitations": [
+      "固定 h3 标题层级；不提供拖拽排序。"
+    ],
+    "references": [
+      {
+        "name": "Vue 官方组件属性",
+        "url": "https://cn.vuejs.org/guide/components/attrs",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "name": "YkBreadcrumb",
+    "title": "面包屑",
+    "category": "导航",
+    "summary": "让用户知道现在的位置与返回路径。",
+    "status": "beta",
+    "since": "0.2.0",
+    "source": "packages/vue/src/components/breadcrumb/index.js",
+    "style": "packages/vue/src/components/breadcrumb/style.css",
+    "types": "packages/vue/src/components/breadcrumb/index.d.ts",
+    "spec": "references/components/breadcrumb.md",
+    "evidenceLevel": "independent-implementation",
+    "props": [
+      {
+        "name": "items",
+        "type": "BreadcrumbItem[]",
+        "default": "[]",
+        "description": "末项表示当前页。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "面包屑",
+        "description": "导航区可访问名称。"
+      },
+      {
+        "name": "separator",
+        "type": "string",
+        "default": "/",
+        "description": "装饰性分隔文本。"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "navigate",
+        "payload": "见类型与实现"
+      }
+    ],
+    "structure": "nav → ol → li / link or button / current span",
+    "visual": "使用统一品牌、前景、圆角和间距变量；工作台按实际能力暴露可调参数。",
+    "rules": [
+      "当前项声明 aria-current；无 href 的中间项发出 navigate 事件。"
+    ],
+    "limitations": [
+      "库不负责路由；URL 只允许 http(s)、站内相对地址与 hash。"
+    ],
+    "references": [
+      {
+        "name": "Vue 官方组件属性",
+        "url": "https://cn.vuejs.org/guide/components/attrs",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "pagination",
+    "name": "YkPagination",
+    "title": "分页",
+    "category": "导航",
+    "summary": "有边界、有当前状态的分页导航。",
+    "status": "beta",
+    "since": "0.2.0",
+    "source": "packages/vue/src/components/pagination/index.js",
+    "style": "packages/vue/src/components/pagination/style.css",
+    "types": "packages/vue/src/components/pagination/index.d.ts",
+    "spec": "references/components/pagination.md",
+    "evidenceLevel": "independent-implementation",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "number",
+        "default": "undefined",
+        "description": "当前页，从 1 开始。"
+      },
+      {
+        "name": "total",
+        "type": "number",
+        "default": "100",
+        "description": "总条数。"
+      },
+      {
+        "name": "pageSize",
+        "type": "number",
+        "default": "10",
+        "description": "每页条数。"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用所有翻页。"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见类型与实现"
+      }
+    ],
+    "structure": "nav → previous / numbered buttons / next",
+    "visual": "使用统一品牌、前景、圆角和间距变量；工作台按实际能力暴露可调参数。",
+    "rules": [
+      "首尾按钮按边界禁用；当前页 aria-current；页数减少时显示值收敛。"
+    ],
+    "limitations": [
+      "只发出页码，不请求数据；没有页容量选择器和快速跳页。"
+    ],
+    "references": [
+      {
+        "name": "Vue 官方组件属性",
+        "url": "https://cn.vuejs.org/guide/components/attrs",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "skeleton",
+    "name": "YkSkeleton",
+    "title": "骨架屏",
+    "category": "反馈",
+    "summary": "用轻量占位表达内容即将到来。",
+    "status": "beta",
+    "since": "0.2.0",
+    "source": "packages/vue/src/components/skeleton/index.js",
+    "style": "packages/vue/src/components/skeleton/style.css",
+    "types": "packages/vue/src/components/skeleton/index.d.ts",
+    "spec": "references/components/skeleton.md",
+    "evidenceLevel": "independent-implementation",
+    "props": [
+      {
+        "name": "lines",
+        "type": "number",
+        "default": "3",
+        "description": "显示 1–12 行。"
+      },
+      {
+        "name": "avatar",
+        "type": "boolean",
+        "default": "false",
+        "description": "显示头像占位。"
+      },
+      {
+        "name": "animated",
+        "type": "boolean",
+        "default": "true",
+        "description": "启用轻微透明度变化，遵守减少动效。"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "内容加载中",
+        "description": "读屏描述。"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "structure": "status wrapper → decorative avatar and lines",
+    "visual": "使用统一品牌、前景、圆角和间距变量；工作台按实际能力暴露可调参数。",
+    "rules": [
+      "动态内容只读一次加载标签，不重复播报装饰行。"
+    ],
+    "limitations": [
+      "仅占位，不负责加载流程及真实内容的切换。"
+    ],
+    "references": [
+      {
+        "name": "Vue 官方组件属性",
+        "url": "https://cn.vuejs.org/guide/components/attrs",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "empty-state",
+    "name": "YkEmptyState",
+    "title": "空状态",
+    "category": "反馈",
+    "summary": "说明为什么为空，并提供可执行的下一步。",
+    "status": "beta",
+    "since": "0.2.0",
+    "source": "packages/vue/src/components/empty-state/index.js",
+    "style": "packages/vue/src/components/empty-state/style.css",
+    "types": "packages/vue/src/components/empty-state/index.d.ts",
+    "spec": "references/components/empty-state.md",
+    "evidenceLevel": "independent-implementation",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "这里还没有内容",
+        "description": "标题。"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "默认说明",
+        "description": "解释原因并建议下一步。"
+      },
+      {
+        "name": "actionLabel",
+        "type": "string",
+        "default": "新建项目",
+        "description": "主操作文字；空字符串隐藏按钮。"
+      }
+    ],
+    "slots": [
+      "illustration",
+      "actions"
+    ],
+    "events": [
+      {
+        "name": "action",
+        "payload": "见类型与实现"
+      }
+    ],
+    "structure": "section → illustration + h3 + description + action",
+    "visual": "使用统一品牌、前景、圆角和间距变量；工作台按实际能力暴露可调参数。",
+    "rules": [
+      "不把空状态当错误；主按钮只发 action，由业务处理。"
+    ],
+    "limitations": [
+      "无远程插图下载；自定义图使用 illustration 插槽。"
+    ],
+    "references": [
+      {
+        "name": "Vue 官方组件属性",
+        "url": "https://cn.vuejs.org/guide/components/attrs",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "spinner",
+    "name": "YkSpinner",
+    "title": "加载指示",
+    "category": "反馈",
+    "summary": "用于短暂等待与局部加载状态。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/spinner/index.js",
+    "style": "packages/vue/src/components/spinner/style.css",
+    "types": "packages/vue/src/components/spinner/index.d.ts",
+    "spec": "references/components/spinner.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "toggle",
+    "name": "YkToggle",
+    "title": "切换按钮",
+    "category": "基础",
+    "summary": "单个开关式按钮，适合收藏、粗体、筛选等状态切换。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/toggle/index.js",
+    "style": "packages/vue/src/components/toggle/style.css",
+    "types": "packages/vue/src/components/toggle/index.d.ts",
+    "spec": "references/components/toggle.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "button-group",
+    "name": "YkButtonGroup",
+    "title": "按钮组",
+    "category": "基础",
+    "summary": "将相关操作收束为一个视觉组。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/button-group/index.js",
+    "style": "packages/vue/src/components/button-group/style.css",
+    "types": "packages/vue/src/components/button-group/index.d.ts",
+    "spec": "references/components/button-group.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "name": "YkTable",
+    "title": "数据表格",
+    "category": "展示",
+    "summary": "用于密集型结构化数据展示；保持原生 table 语义。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/table/index.js",
+    "style": "packages/vue/src/components/table/style.css",
+    "types": "packages/vue/src/components/table/index.d.ts",
+    "spec": "references/components/table.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "popover",
+    "name": "YkPopover",
+    "title": "弹出卡片",
+    "category": "反馈",
+    "summary": "轻量补充信息或少量操作的浮层。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/popover/index.js",
+    "style": "packages/vue/src/components/popover/style.css",
+    "types": "packages/vue/src/components/popover/index.d.ts",
+    "spec": "references/components/popover.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "drawer",
+    "name": "YkDrawer",
+    "title": "抽屉",
+    "category": "反馈",
+    "summary": "从边缘进入的辅助任务容器。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/drawer/index.js",
+    "style": "packages/vue/src/components/drawer/style.css",
+    "types": "packages/vue/src/components/drawer/index.d.ts",
+    "spec": "references/components/drawer.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "dropdown-menu",
+    "name": "YkDropdownMenu",
+    "title": "下拉菜单",
+    "category": "导航",
+    "summary": "围绕触发器提供一组短操作。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/dropdown-menu/index.js",
+    "style": "packages/vue/src/components/dropdown-menu/style.css",
+    "types": "packages/vue/src/components/dropdown-menu/index.d.ts",
+    "spec": "references/components/dropdown-menu.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "combobox",
+    "name": "YkCombobox",
+    "title": "组合选择",
+    "category": "表单",
+    "summary": "文本过滤与选项选择的组合输入。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/combobox/index.js",
+    "style": "packages/vue/src/components/combobox/style.css",
+    "types": "packages/vue/src/components/combobox/index.d.ts",
+    "spec": "references/components/combobox.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "scroll-area",
+    "name": "YkScrollArea",
+    "title": "滚动区域",
+    "category": "展示",
+    "summary": "为受限区域提供稳定滚动容器。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/scroll-area/index.js",
+    "style": "packages/vue/src/components/scroll-area/style.css",
+    "types": "packages/vue/src/components/scroll-area/index.d.ts",
+    "spec": "references/components/scroll-area.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "stepper",
+    "name": "YkStepper",
+    "title": "步骤条",
+    "category": "导航",
+    "summary": "展示多步骤流程的当前位置和完成状态。",
+    "status": "beta",
+    "since": "0.4.0",
+    "source": "packages/vue/src/components/stepper/index.js",
+    "style": "packages/vue/src/components/stepper/style.css",
+    "types": "packages/vue/src/components/stepper/index.d.ts",
+    "spec": "references/components/stepper.md",
+    "evidenceLevel": "reference",
+    "props": [],
+    "slots": [
+      "default"
+    ],
+    "events": [],
+    "structure": "独立 Vue 组件；详见源码。",
+    "visual": "继承 YuanKit Token，可在 Studio 预览。",
+    "rules": [
+      "保持原生语义和键盘基础行为。"
+    ],
+    "limitations": [
+      "0.4.0 首版，复杂场景继续补充测试。"
+    ],
+    "references": [
+      {
+        "name": "shadcn/vue components",
+        "url": "https://www.shadcn-vue.com/docs/components",
+        "verification": "reference"
+      },
+      {
+        "name": "Reka UI",
+        "url": "https://reka-ui.com/docs/overview/introduction",
+        "verification": "reference"
+      }
+    ]
+  },
+  {
+    "id": "calendar",
+    "name": "YkCalendar",
+    "title": "日历",
+    "category": "表单",
+    "summary": "日期网格、月份切换与键盘导航。",
+    "source": "packages/vue/src/components/calendar/index.js",
+    "style": "packages/vue/src/components/calendar/style.css",
+    "types": "packages/vue/src/components/calendar/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/calendar.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "ISO 日期 YYYY-MM-DD，受控值"
+      },
+      {
+        "name": "min / max",
+        "type": "string",
+        "default": "undefined",
+        "description": "可选择日期的闭区间"
+      },
+      {
+        "name": "weekStartsOn",
+        "type": "0 | 1",
+        "default": "1",
+        "description": "每周起始日：周日/周一"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用整个日期网格"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkCalendar → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "日期网格、月份切换与键盘导航。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "1900–2100 年公历，单选；无农历、时间、日期范围、多选或远程禁用日期。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "date-picker",
+    "name": "YkDatePicker",
+    "title": "日期输入",
+    "category": "表单",
+    "summary": "原生 date 输入，支持表单与日期边界。",
+    "source": "packages/vue/src/components/date-picker/index.js",
+    "style": "packages/vue/src/components/date-picker/style.css",
+    "types": "packages/vue/src/components/date-picker/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/date-picker.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "ISO 日期字符串；可用 v-model"
+      },
+      {
+        "name": "min / max",
+        "type": "string",
+        "default": "undefined",
+        "description": "原生输入约束"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "undefined",
+        "description": "原生表单字段名"
+      },
+      {
+        "name": "required / disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "原生表单与禁用状态"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkDatePicker → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "原生 date 输入，支持表单与日期边界。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "系统弹出的日期面板样式由浏览器决定。自定义网格请使用 YkCalendar；不是范围选择器。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "file-upload",
+    "name": "YkFileUpload",
+    "title": "文件选择",
+    "category": "表单",
+    "summary": "本地文件选择、拖入、体积与数量校验、移除。",
+    "source": "packages/vue/src/components/file-upload/index.js",
+    "style": "packages/vue/src/components/file-upload/style.css",
+    "types": "packages/vue/src/components/file-upload/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/file-upload.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "File[]",
+        "default": "undefined",
+        "description": "受控本地文件数组"
+      },
+      {
+        "name": "maxSize",
+        "type": "number",
+        "default": "10485760",
+        "description": "单文件上限，单位 byte"
+      },
+      {
+        "name": "maxFiles",
+        "type": "number",
+        "default": "5",
+        "description": "累计数量限制"
+      },
+      {
+        "name": "accept",
+        "type": "string",
+        "default": "空字符串",
+        "description": "原生文件类型/扩展名提示"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁止选择、拖入及移除"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "reject",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkFileUpload → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "本地文件选择、拖入、体积与数量校验、移除。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不上传、不扫描病毒；accept 是前端提示，真实上传必须由服务端再次验证。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "tree",
+    "name": "YkTree",
+    "title": "树形导航",
+    "category": "导航",
+    "summary": "展开收起、层级语义、单选与方向键导航。",
+    "source": "packages/vue/src/components/tree/index.js",
+    "style": "packages/vue/src/components/tree/style.css",
+    "types": "packages/vue/src/components/tree/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/tree.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "TreeNode[]",
+        "default": "[]",
+        "description": "value 全树唯一；children 可递归"
+      },
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "当前选中节点"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁用所有节点"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkTree → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "展开收起、层级语义、单选与方向键导航。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不含多选、拖拽排序、懒加载或虚拟化；节点 value 必须全树唯一。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "name": "YkCarousel",
+    "title": "轮播",
+    "category": "展示",
+    "summary": "可手动切换与循环的内容轮播。",
+    "source": "packages/vue/src/components/carousel/index.js",
+    "style": "packages/vue/src/components/carousel/style.css",
+    "types": "packages/vue/src/components/carousel/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/carousel.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "{value,label,content?}[]",
+        "default": "[]",
+        "description": "按顺序展示的内容"
+      },
+      {
+        "name": "modelValue",
+        "type": "number",
+        "default": "undefined",
+        "description": "当前索引，0 起始"
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "default": "false",
+        "description": "手动切换是否首尾循环"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkCarousel → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "可手动切换与循环的内容轮播。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "默认不自动播放，不含触摸手势或无限虚拟列表。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "toast",
+    "name": "YkToast",
+    "title": "轻提示",
+    "category": "反馈",
+    "summary": "状态反馈、定时关闭、焦点与悬停暂停计时。",
+    "source": "packages/vue/src/components/toast/index.js",
+    "style": "packages/vue/src/components/toast/style.css",
+    "types": "packages/vue/src/components/toast/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/toast.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "default": "true",
+        "description": "受控显示状态"
+      },
+      {
+        "name": "title / description",
+        "type": "string",
+        "default": "已保存 / undefined",
+        "description": "提示内容"
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "default": "5000",
+        "description": "毫秒；0 不自动关闭"
+      },
+      {
+        "name": "tone",
+        "type": "string",
+        "default": "success",
+        "description": "success/danger/warning/primary/neutral"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:open",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkToast → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "状态反馈、定时关闭、焦点与悬停暂停计时。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "受控提示；多提示队列、全局堆叠与跨路由持久化由业务端管理。duration=0 保持显示。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "command",
+    "name": "YkCommand",
+    "title": "命令面板",
+    "category": "导航",
+    "summary": "可搜索的快捷操作弹窗，支持键盘选中。",
+    "source": "packages/vue/src/components/command/index.js",
+    "style": "packages/vue/src/components/command/style.css",
+    "types": "packages/vue/src/components/command/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/command.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "default": "false",
+        "description": "受控弹窗开关"
+      },
+      {
+        "name": "items",
+        "type": "CommandItem[]",
+        "default": "[]",
+        "description": "含 value,label,disabled?,shortcut?"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "快捷命令",
+        "description": "可访问名称与窗口标题"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:open",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "select",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkCommand → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "可搜索的快捷操作弹窗，支持键盘选中。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "仅触发 select 事件，不执行代码；不注册抢占浏览器的全局快捷键；不含模糊排序与远程加载。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "sidebar",
+    "name": "YkSidebar",
+    "title": "侧边导航",
+    "category": "导航",
+    "summary": "可收起的业务导航，当前项与禁用态。",
+    "source": "packages/vue/src/components/sidebar/index.js",
+    "style": "packages/vue/src/components/sidebar/style.css",
+    "types": "packages/vue/src/components/sidebar/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/sidebar.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "{value,label,disabled?}[]",
+        "default": "[]",
+        "description": "单层导航数据"
+      },
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "undefined",
+        "description": "当前导航项"
+      },
+      {
+        "name": "brand",
+        "type": "string",
+        "default": "工作空间",
+        "description": "侧栏名称"
+      },
+      {
+        "name": "collapsed",
+        "type": "boolean",
+        "default": "undefined",
+        "description": "受控收起；不传时组件自行管理"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "update:collapsed",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkSidebar → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "可收起的业务导航，当前项与禁用态。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "单层导航；不内置路由、权限过滤或移动端抽屉。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "chart",
+    "name": "YkChart",
+    "title": "基础图表",
+    "category": "展示",
+    "summary": "SVG 柱状/折线图，正负数与等价数值表。",
+    "source": "packages/vue/src/components/chart/index.js",
+    "style": "packages/vue/src/components/chart/style.css",
+    "types": "packages/vue/src/components/chart/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/chart.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "data",
+        "type": "{label,value:number}[]",
+        "default": "[]",
+        "description": "有效有限数值，最多 30 个点"
+      },
+      {
+        "name": "kind",
+        "type": "'bar' | 'line'",
+        "default": "bar",
+        "description": "柱状或折线"
+      },
+      {
+        "name": "showTable",
+        "type": "boolean",
+        "default": "true",
+        "description": "显示数据表；关闭时仍保留屏幕阅读器文本"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkChart → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "SVG 柱状/折线图，正负数与等价数值表。",
+      "值由调用方传入；不在展示组件中请求业务服务。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "单序列、最多 30 点；不是完整图表库，不含缩放、多轴、实时海量数据。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "tags-input",
+    "name": "YkTagsInput",
+    "title": "标签输入",
+    "category": "表单",
+    "summary": "标签输入、去重、移除与中文输入法保护。",
+    "source": "packages/vue/src/components/tags-input/index.js",
+    "style": "packages/vue/src/components/tags-input/style.css",
+    "types": "packages/vue/src/components/tags-input/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/tags-input.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string[]",
+        "default": "undefined",
+        "description": "受控标签数组"
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "default": "8",
+        "description": "最多标签数"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁止新增和移除"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkTagsInput → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "标签输入、去重、移除与中文输入法保护。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "纯文本标签，无建议列表、异步搜索或复杂对象值。"
+    ],
+    "references": [
+      {
+        "name": "Reka UI · Accessibility",
+        "url": "https://www.reka-ui.com/docs/overview/accessibility",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-streaming-text",
+    "name": "YkAIStreamingText",
+    "title": "流式文本",
+    "category": "AI 界面",
+    "summary": "接收逐步累积的文本，显示可关闭的流式光标。",
+    "source": "packages/vue/src/ai/ai-streaming-text/index.js",
+    "style": "packages/vue/src/ai/ai-streaming-text/style.css",
+    "types": "packages/vue/src/ai/ai-streaming-text/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-streaming-text.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "content",
+        "type": "string",
+        "default": "空字符串",
+        "description": "应用累计传入的文本"
+      },
+      {
+        "name": "streaming",
+        "type": "boolean",
+        "default": "false",
+        "description": "生成进行中标记"
+      },
+      {
+        "name": "cursor",
+        "type": "boolean",
+        "default": "true",
+        "description": "是否显示流式光标"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIStreamingText → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "接收逐步累积的文本，显示可关闭的流式光标。",
+      "值由调用方传入；不在展示组件中请求业务服务。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不会自动请求模型；本身不生成假字符；只渲染纯文本，不执行 Markdown 中的 HTML。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-message",
+    "name": "YkAIMessage",
+    "title": "AI 消息",
+    "category": "AI 界面",
+    "summary": "用户/助手消息、流式状态、复制与反馈。",
+    "source": "packages/vue/src/ai/ai-message/index.js",
+    "style": "packages/vue/src/ai/ai-message/style.css",
+    "types": "packages/vue/src/ai/ai-message/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-message.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "role",
+        "type": "'user' | 'assistant' | 'system'",
+        "default": "assistant",
+        "description": "消息发送者"
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "default": "空字符串",
+        "description": "只按纯文本渲染"
+      },
+      {
+        "name": "status",
+        "type": "'idle' | 'streaming' | 'success' | 'error'",
+        "default": "idle",
+        "description": "状态由应用提供"
+      },
+      {
+        "name": "appearance",
+        "type": "'bubble' | 'plain' | 'card'",
+        "default": "bubble",
+        "description": "展示形式"
+      },
+      {
+        "name": "showAvatar / showActions",
+        "type": "boolean",
+        "default": "true",
+        "description": "显示头像、复制与反馈入口"
+      }
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [
+      {
+        "name": "copy",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "feedback",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "retry",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIMessage → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "用户/助手消息、流式状态、复制与反馈。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "模型内容按纯文本显示；反馈只发事件、不写数据库；复制被浏览器拒绝时显示真实失败提示。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-conversation",
+    "name": "YkAIConversation",
+    "title": "对话列表",
+    "category": "AI 界面",
+    "summary": "跟随最新消息；用户向上阅读时不强制拉回底部。",
+    "source": "packages/vue/src/ai/ai-conversation/index.js",
+    "style": "packages/vue/src/ai/ai-conversation/style.css",
+    "types": "packages/vue/src/ai/ai-conversation/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-conversation.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "messages",
+        "type": "AIMessageData[]",
+        "default": "[]",
+        "description": "id 稳定且唯一；内容更新不会更换 id"
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "default": "400",
+        "description": "可滚动内容高度，160–1200px"
+      },
+      {
+        "name": "streaming",
+        "type": "boolean",
+        "default": "false",
+        "description": "控制流式期间的播报"
+      },
+      {
+        "name": "appearance",
+        "type": "string",
+        "default": "bubble",
+        "description": "消息外观"
+      },
+      {
+        "name": "showAvatar",
+        "type": "boolean",
+        "default": "true",
+        "description": "显示每条消息头像"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "feedback",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "retry",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIConversation → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "跟随最新消息；用户向上阅读时不强制拉回底部。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不含虚拟列表、分页历史锚定或消息持久化；流式期间避免逐字符播报。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-model-select",
+    "name": "YkAIModelSelect",
+    "title": "模型选择",
+    "category": "AI 界面",
+    "summary": "应用提供模型目录；组件负责选择与禁用态。",
+    "source": "packages/vue/src/ai/ai-model-select/index.js",
+    "style": "packages/vue/src/ai/ai-model-select/style.css",
+    "types": "packages/vue/src/ai/ai-model-select/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-model-select.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "options",
+        "type": "AIModelOption[]",
+        "default": "[]",
+        "description": "应用可用的模型目录"
+      },
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "空字符串",
+        "description": "选中的模型 ID"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁止切换模型"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIModelSelect → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "应用提供模型目录；组件负责选择与禁用态。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "只是原生选择器，不内置提供商、API 密钥、模型可用性或路由。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-attachments",
+    "name": "YkAIAttachments",
+    "title": "AI 附件",
+    "category": "AI 界面",
+    "summary": "展示附件元信息与移除操作。",
+    "source": "packages/vue/src/ai/ai-attachments/index.js",
+    "style": "packages/vue/src/ai/ai-attachments/style.css",
+    "types": "packages/vue/src/ai/ai-attachments/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-attachments.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "AIAttachment[]",
+        "default": "[]",
+        "description": "附件元数据，不是上传结果"
+      },
+      {
+        "name": "removable",
+        "type": "boolean",
+        "default": "true",
+        "description": "显示移除按钮"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁止移除"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "remove",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIAttachments → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "展示附件元信息与移除操作。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不读取或上传文件，不渲染不可信缩略图，不代表模型已收到附件。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-prompt-input",
+    "name": "YkAIPromptInput",
+    "title": "提示词输入",
+    "category": "AI 界面",
+    "summary": "支持发送/停止、模型选择、附件选择与中文输入法。",
+    "source": "packages/vue/src/ai/ai-prompt-input/index.js",
+    "style": "packages/vue/src/ai/ai-prompt-input/style.css",
+    "types": "packages/vue/src/ai/ai-prompt-input/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-prompt-input.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "string",
+        "default": "空字符串",
+        "description": "受控输入文本"
+      },
+      {
+        "name": "model / models",
+        "type": "string / AIModelOption[]",
+        "default": "空字符串 / []",
+        "description": "模型 ID 与可选目录"
+      },
+      {
+        "name": "busy / disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "生成中显示停止按钮；disabled 禁止操作"
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "default": "3",
+        "description": "初始行数"
+      },
+      {
+        "name": "sendKey",
+        "type": "'enter' | 'modifier-enter'",
+        "default": "enter",
+        "description": "发送快捷键；始终保护 IME"
+      },
+      {
+        "name": "attachments",
+        "type": "boolean",
+        "default": "true",
+        "description": "启用本地文件选择"
+      },
+      {
+        "name": "maxFiles / maxLength",
+        "type": "number",
+        "default": "3 / 8000",
+        "description": "文件数量、文本长度"
+      },
+      {
+        "name": "accept",
+        "type": "string",
+        "default": ".txt,.md,.pdf,.png,.jpg,.jpeg",
+        "description": "允许文件类型"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "update:modelValue",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "update:model",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "submit",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "stop",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "reject",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIPromptInput → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "支持发送/停止、模型选择、附件选择与中文输入法。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "只发 submit/stop 事件；由调用方清空文本、设 busy、取消请求与上传。附件默认只存在内存。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-tool-call",
+    "name": "YkAIToolCall",
+    "title": "工具调用卡片",
+    "category": "AI 界面",
+    "summary": "可展开的工具参数、结果、错误与人工确认状态。",
+    "source": "packages/vue/src/ai/ai-tool-call/index.js",
+    "style": "packages/vue/src/ai/ai-tool-call/style.css",
+    "types": "packages/vue/src/ai/ai-tool-call/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-tool-call.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "default": "search_documents",
+        "description": "工具显示名称"
+      },
+      {
+        "name": "status",
+        "type": "'idle'|'running'|'success'|'error'|'approval'",
+        "default": "success",
+        "description": "工具状态，不会自动执行"
+      },
+      {
+        "name": "input / output",
+        "type": "string",
+        "default": "空字符串",
+        "description": "参数与结果文本"
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean",
+        "default": "false",
+        "description": "初始展开内容"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "approve",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "reject",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIToolCall → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "可展开的工具参数、结果、错误与人工确认状态。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "仅展示状态并发出审批意图。执行、权限验证、幂等和工具审计必须由后端负责。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-sources",
+    "name": "YkAISources",
+    "title": "引用来源",
+    "category": "AI 界面",
+    "summary": "编号引用、域名与摘要，可折叠并访问安全链接。",
+    "source": "packages/vue/src/ai/ai-sources/index.js",
+    "style": "packages/vue/src/ai/ai-sources/style.css",
+    "types": "packages/vue/src/ai/ai-sources/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-sources.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "AISource[]",
+        "default": "[]",
+        "description": "id,title,url,description?"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "参考来源",
+        "description": "来源列表标题"
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean",
+        "default": "true",
+        "description": "初始展开"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAISources → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "编号引用、域名与摘要，可折叠并访问安全链接。",
+      "值由调用方传入；不在展示组件中请求业务服务。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不声称引用已经被检索验证。仅允许 http/https；禁止 javascript/data/file 链接。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-activity",
+    "name": "YkAIActivity",
+    "title": "任务进展",
+    "category": "AI 界面",
+    "summary": "展示应用公开的任务步骤及成功/失败状态。",
+    "source": "packages/vue/src/ai/ai-activity/index.js",
+    "style": "packages/vue/src/ai/ai-activity/style.css",
+    "types": "packages/vue/src/ai/ai-activity/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-activity.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "AIActivityStep[]",
+        "default": "[]",
+        "description": "公开步骤与状态，不是隐藏思维链"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "任务进展",
+        "description": "区域标题"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIActivity → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "展示应用公开的任务步骤及成功/失败状态。",
+      "值由调用方传入；不在展示组件中请求业务服务。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "只显示公开任务摘要，不索取或展示模型隐藏思维链；进度由应用提供。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-suggestions",
+    "name": "YkAISuggestions",
+    "title": "建议提示词",
+    "category": "AI 界面",
+    "summary": "建议问题，可呈现为标签或信息卡片。",
+    "source": "packages/vue/src/ai/ai-suggestions/index.js",
+    "style": "packages/vue/src/ai/ai-suggestions/style.css",
+    "types": "packages/vue/src/ai/ai-suggestions/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-suggestions.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "items",
+        "type": "{value,label,content?,disabled?}[]",
+        "default": "[]",
+        "description": "建议问题数据"
+      },
+      {
+        "name": "layout",
+        "type": "'chips' | 'cards'",
+        "default": "chips",
+        "description": "标签或卡片"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "禁止选择"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "select",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAISuggestions → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "建议问题，可呈现为标签或信息卡片。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "仅触发 select；是否填入输入框还是直接发送由应用决定。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-artifact",
+    "name": "YkAIArtifact",
+    "title": "产物面板",
+    "category": "AI 界面",
+    "summary": "代码/文本产物与说明切换、复制、文本导出。",
+    "source": "packages/vue/src/ai/ai-artifact/index.js",
+    "style": "packages/vue/src/ai/ai-artifact/style.css",
+    "types": "packages/vue/src/ai/ai-artifact/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-artifact.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "title / content / summary",
+        "type": "string",
+        "default": "设计产物 / 空字符串 / 审阅提示",
+        "description": "文本内容与说明"
+      },
+      {
+        "name": "language",
+        "type": "string",
+        "default": "text",
+        "description": "展示语言标记，不触发执行"
+      },
+      {
+        "name": "downloadable",
+        "type": "boolean",
+        "default": "true",
+        "description": "允许导出安全 .txt 文本"
+      }
+    ],
+    "slots": [],
+    "events": [
+      {
+        "name": "download",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      },
+      {
+        "name": "copy",
+        "payload": "见公开 TypeScript 接口；只产生界面事件"
+      }
+    ],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIArtifact → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "代码/文本产物与说明切换、复制、文本导出。",
+      "受控参数通过对应 update 事件回传，由调用方维护应用状态。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "没有执行沙箱，不渲染原始 HTML；产物导出为 .txt，运行或部署由应用单独审查。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  },
+  {
+    "id": "ai-usage",
+    "name": "YkAIUsage",
+    "title": "上下文用量",
+    "category": "AI 界面",
+    "summary": "显示应用提供的 token 计数与上下文容量。",
+    "source": "packages/vue/src/ai/ai-usage/index.js",
+    "style": "packages/vue/src/ai/ai-usage/style.css",
+    "types": "packages/vue/src/ai/ai-usage/index.d.ts",
+    "status": "beta",
+    "since": "0.5.0",
+    "spec": "references/components/ai-usage.md",
+    "evidenceLevel": "reviewed",
+    "props": [
+      {
+        "name": "used / limit",
+        "type": "number",
+        "default": "0 / 32000",
+        "description": "应用提供的使用量与上限"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "上下文使用量",
+        "description": "指标标题"
+      }
+    ],
+    "slots": [],
+    "events": [],
+    "visual": "共用主题 Token；尺寸、圆角、前景/背景与边框按参数面板映射。保留可见焦点，明暗主题不复制独立实现。",
+    "structure": "YkAIUsage → 原生语义容器 / 内容 / 状态 / 可用操作",
+    "rules": [
+      "显示应用提供的 token 计数与上下文容量。",
+      "值由调用方传入；不在展示组件中请求业务服务。",
+      "用户文本作为文本节点渲染，不注入 HTML 或执行代码。"
+    ],
+    "limitations": [
+      "不计算真实 token、不推算费用；计数应来自后端可信元数据。"
+    ],
+    "references": [
+      {
+        "name": "AI Elements Vue · Conversation",
+        "url": "https://www.ai-elements-vue.com/components/chatbot/conversation",
+        "verification": "reviewed"
+      },
+      {
+        "name": "AI Elements · Tool",
+        "url": "https://elements.ai-sdk.dev/components/tool",
+        "verification": "reviewed"
+      },
+      {
+        "name": "shadcn/vue · Message Scroller",
+        "url": "https://www.shadcn-vue.com/docs/components/message-scroller",
+        "verification": "reviewed"
+      }
+    ]
+  }
+]

@@ -1,0 +1,2 @@
+import {defineComponent,h,mergeProps} from 'vue';
+export const YkSpinner=defineComponent({name:'YkSpinner',inheritAttrs:false,props:{label:{type:String,default:'加载中'},size:{type:String,default:'md'}},setup(p,{attrs}){return()=>h('span',mergeProps(attrs,{class:['yk-spinner','yk-spinner--'+p.size],role:'status','aria-label':p.label}),[h('span',{class:'yk-spinner__ring','aria-hidden':'true'}),h('span',{class:'yk-sr-only'},p.label)]);}});

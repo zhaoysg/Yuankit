@@ -1,0 +1,83 @@
+.yk-theme {
+  --yk-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+  --yk-font-size: 14px;
+  --yk-line-height: 1.55;
+  --yk-space-1: 4px;
+  --yk-space-2: 8px;
+  --yk-space-3: 12px;
+  --yk-space-4: 16px;
+  --yk-space-6: 24px;
+  --yk-space-8: 32px;
+  --yk-duration: 160ms;
+  --yk-ease: cubic-bezier(.2,.7,.2,1);
+  --yk-focus-width: 3px;
+  --yk-overlay: rgb(16 19 28 / .5);
+  --yk-radius-pill: 999px;
+  --yk-z-tooltip: 1000;
+}
+.yk-theme[data-yk-mode="light"] {
+  --yk-primary: #5b45d6;
+  --yk-primary-hover: #4934b9;
+  --yk-on-primary: #ffffff;
+  --yk-primary-soft: #f0edff;
+  --yk-background: #f7f8fa;
+  --yk-surface: #ffffff;
+  --yk-surface-raised: #ffffff;
+  --yk-muted: #f1f2f6;
+  --yk-text: #20232d;
+  --yk-text-muted: #626875;
+  --yk-border: #d9dce4;
+  --yk-success: #16714d;
+  --yk-success-soft: #e9f6ef;
+  --yk-warning: #875711;
+  --yk-warning-soft: #fff4de;
+  --yk-danger: #b82f4e;
+  --yk-danger-soft: #fff0f3;
+  --yk-focus: #826bee;
+}
+.yk-theme[data-yk-mode="dark"] {
+  --yk-primary: #a99afb;
+  --yk-primary-hover: #c3b8ff;
+  --yk-on-primary: #1c1637;
+  --yk-primary-soft: #30264f;
+  --yk-background: #14161d;
+  --yk-surface: #1c1f29;
+  --yk-surface-raised: #242835;
+  --yk-muted: #292d3a;
+  --yk-text: #f1f2f7;
+  --yk-text-muted: #b0b5c5;
+  --yk-border: #444a5e;
+  --yk-success: #8edab2;
+  --yk-success-soft: #193c30;
+  --yk-warning: #ebc880;
+  --yk-warning-soft: #433720;
+  --yk-danger: #f69bb0;
+  --yk-danger-soft: #452a36;
+  --yk-focus: #baaaff;
+}
+.yk-theme[data-yk-skin="soft"] {
+  --yk-radius-control: 12px;
+  --yk-radius-panel: 20px;
+  --yk-shadow: 0 8px 30px rgb(25 26 45 / .055);
+  --yk-field-background: var(--yk-muted);
+}
+.yk-theme[data-yk-skin="precise"] {
+  --yk-radius-control: 6px;
+  --yk-radius-panel: 10px;
+  --yk-shadow: 0 2px 8px rgb(25 26 45 / .035);
+  --yk-field-background: var(--yk-surface);
+}
+.yk-theme[data-yk-density="comfortable"] {
+  --yk-height-sm: 32px;
+  --yk-height-md: 40px;
+  --yk-height-lg: 48px;
+  --yk-control-padding: 14px;
+  --yk-panel-padding: 24px;
+}
+.yk-theme[data-yk-density="compact"] {
+  --yk-height-sm: 28px;
+  --yk-height-md: 32px;
+  --yk-height-lg: 40px;
+  --yk-control-padding: 10px;
+  --yk-panel-padding: 16px;
+}

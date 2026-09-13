@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "button",
+  "settings": {
+    "variant": "outline",
+    "radius": 8,
+    "borderWidth": 1,
+    "shadow": 0,
+    "surface": "#ffffff"
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

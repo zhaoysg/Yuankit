@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "button",
+  "settings": {
+    "gradient": true,
+    "radius": 18,
+    "primary": "#6750d8",
+    "gradientEnd": "#b64b86",
+    "foreground": "#ffffff",
+    "variant": "primary"
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

@@ -1,0 +1,67 @@
+RUN Combobox: external selection synchronizes; keyboard skips disabled; Esc closes
+PASS Combobox: external selection synchronizes; keyboard skips disabled; Esc closes
+RUN Combobox: disabled instance cannot select or change value
+PASS Combobox: disabled instance cannot select or change value
+RUN Popover: two instances isolate outside clicks and return focus on Escape
+PASS Popover: two instances isolate outside clicks and return focus on Escape
+RUN Calendar: leap-year keyboard selection and month-change clamp
+PASS Calendar: leap-year keyboard selection and month-change clamp
+RUN Calendar: inclusive minimum/maximum restrict clicks and navigation
+PASS Calendar: inclusive minimum/maximum restrict clicks and navigation
+RUN Native date field: controlled ISO input and FormData binding
+PASS Native date field: controlled ISO input and FormData binding
+RUN File selection: accepted types, rejection, no uploads and remove
+PASS File selection: accepted types, rejection, no uploads and remove
+RUN Tree: keyboard expand, skip disabled and select leaf
+PASS Tree: keyboard expand, skip disabled and select leaf
+RUN Carousel: manual boundaries and loop behavior, no autoplay
+PASS Carousel: manual boundaries and loop behavior, no autoplay
+RUN Toast: timer pauses while pointer OR keyboard focus remains inside
+PASS Toast: timer pauses while pointer OR keyboard focus remains inside
+RUN Command: search, disabled skip, select event and focus restoration
+PASS Command: search, disabled skip, select event and focus restoration
+RUN Sidebar: collapse and navigation are actual stateful controls
+PASS Sidebar: collapse and navigation are actual stateful controls
+RUN Chart: finite negative data, line switch and readable table
+PASS Chart: finite negative data, line switch and readable table
+RUN Tags: IME guard, Enter add, duplicate rejection and Backspace remove
+PASS Tags: IME guard, Enter add, duplicate rejection and Backspace remove
+RUN AI message: escaped markup, feedback toggle, clipboard failure and retry
+PASS AI message: escaped markup, feedback toggle, clipboard failure and retry
+RUN AI prompt: Enter and IME composition, Shift+Enter, busy stop
+PASS AI prompt: Enter and IME composition, Shift+Enter, busy stop
+RUN AI prompt: attachment local selection, submit metadata and exposed clear
+PASS AI prompt: attachment local selection, submit metadata and exposed clear
+RUN AI prompt: modifier Enter mode and disabled send
+PASS AI prompt: modifier Enter mode and disabled send
+RUN AI conversation: follow new data, respect reading position and return latest
+PASS AI conversation: follow new data, respect reading position and return latest
+RUN AI tool: approval emits once, state controlled by app and text escaped
+PASS AI tool: approval emits once, state controlled by app and text escaped
+RUN AI sources: unsafe URLs never become active anchors
+PASS AI sources: unsafe URLs never become active anchors
+RUN AI artifact: literal code, safe .txt export and summary tab
+PASS AI artifact: literal code, safe .txt export and summary tab
+RUN AI usage: bounded progress, over-limit signal, no token computation
+PASS AI usage: bounded progress, over-limit signal, no token computation
+RUN AI knowledge panel: local search and selection, safe link filtering
+PASS AI knowledge panel: local search and selection, safe link filtering
+RUN AI chat page: real local flow, stop, explicit demo boundary and no network
+PASS AI chat page: real local flow, stop, explicit demo boundary and no network
+RUN AI chat page: forced error then retry and history switching
+PASS AI chat page: forced error then retry and history switching
+RUN Studio: curated gallery 48 real presets render and apply without changing global
+PASS Studio: curated gallery 48 real presets render and apply without changing global
+RUN Studio: AI inspector edits actual bubble radius and avatar visibility
+PASS Studio: AI inspector edits actual bubble radius and avatar visibility
+RUN Studio: v0.4 JSON migrates and exports as v0.5 preserving styles
+PASS Studio: v0.4 JSON migrates and exports as v0.5 preserving styles
+RUN Studio: editable item content changes actual citation link
+PASS Studio: editable item content changes actual citation link
+RUN Motion: replay callback does not use detached event.currentTarget
+PASS Motion: replay callback does not use detached event.currentTarget
+RUN AI desktop and mobile layouts: real screenshots and no horizontal overflow
+PASS AI desktop and mobile layouts: real screenshots and no horizontal overflow
+RUN Reduced motion: streaming cursor respects operating system preference
+PASS Reduced motion: streaming cursor respects operating system preference
+33/33 passed

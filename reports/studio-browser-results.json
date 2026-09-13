@@ -1,0 +1,125 @@
+{
+  "version": "0.5.0",
+  "at": "2026-09-13T02:44:42.361866+00:00",
+  "browser": "Chromium 152.0.7977.84",
+  "vue": "3.5.13",
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "New primitives: range native keyboard and controlled value",
+      "status": "passed",
+      "durationMs": 297
+    },
+    {
+      "name": "New primitives: accordion keyboard, expanded panel, single-open",
+      "status": "passed",
+      "durationMs": 322
+    },
+    {
+      "name": "New primitives: breadcrumb and pagination navigate with proper boundaries",
+      "status": "passed",
+      "durationMs": 350
+    },
+    {
+      "name": "New primitives: skeleton and empty-state semantics/action",
+      "status": "passed",
+      "durationMs": 284
+    },
+    {
+      "name": "Studio: all 103 assets render from real implementation without JS errors",
+      "status": "passed",
+      "durationMs": 13174
+    },
+    {
+      "name": "Inspector: width, height, radius zero and font sliders change computed styles",
+      "status": "passed",
+      "durationMs": 685
+    },
+    {
+      "name": "Inspector: color, skin, shadow and gradient affect rendered button",
+      "status": "passed",
+      "durationMs": 1060
+    },
+    {
+      "name": "Inspector: local/type/global scopes do not leak into sibling assets",
+      "status": "passed",
+      "durationMs": 1024
+    },
+    {
+      "name": "Inspector: undo/redo/reset restore only selected configuration level",
+      "status": "passed",
+      "durationMs": 916
+    },
+    {
+      "name": "Inspector: editing text is escaped; content is not executed",
+      "status": "passed",
+      "durationMs": 757
+    },
+    {
+      "name": "Inspector: item labels and count modify real tabs",
+      "status": "passed",
+      "durationMs": 851
+    },
+    {
+      "name": "Studio: JSON export/import round-trip and invalid import is non-destructive",
+      "status": "passed",
+      "durationMs": 830
+    },
+    {
+      "name": "Studio: Vue code export uses the same edited settings",
+      "status": "passed",
+      "durationMs": 791
+    },
+    {
+      "name": "Studio: named presets save/load/delete in session; denied storage warning honest",
+      "status": "passed",
+      "durationMs": 806
+    },
+    {
+      "name": "Assets: 404 primary and secondary actions are explicit events, not fake navigation",
+      "status": "passed",
+      "durationMs": 775
+    },
+    {
+      "name": "Assets: responsive navbar opens/collapses and emits navigation",
+      "status": "passed",
+      "durationMs": 678
+    },
+    {
+      "name": "Assets: real modal follows local radius/padding and restores trigger focus",
+      "status": "passed",
+      "durationMs": 688
+    },
+    {
+      "name": "Effects: hover lift works; OS reduced-motion and explicit disabled motion stop it",
+      "status": "passed",
+      "durationMs": 320
+    },
+    {
+      "name": "Studio: preview viewport and actual mobile page do not overflow horizontally",
+      "status": "passed",
+      "durationMs": 832
+    },
+    {
+      "name": "Studio: source notes and retained legacy component docs accessible",
+      "status": "passed",
+      "durationMs": 606
+    },
+    {
+      "name": "Studio: visual evidence desktop button, 404, dark card and code",
+      "status": "passed",
+      "durationMs": 1396
+    }
+  ],
+  "notVerified": [
+    "native localStorage across reload under a normal origin",
+    "file:// or HTTP navigation in managed browser",
+    "Safari / Firefox",
+    "Vue SFC consumer build and full typing",
+    "full accessibility audit",
+    "upstream pixel matching",
+    "GitHub remote CI"
+  ]
+}

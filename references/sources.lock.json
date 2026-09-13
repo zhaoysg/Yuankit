@@ -1,0 +1,41 @@
+{
+  "retrievedAt": "2026-09-12",
+  "method": "official documentation and selected source review; no whole-site crawl and no upstream screenshot baseline",
+  "antDesign": {
+    "version": "6.6.3",
+    "commit": "6b46530a84b9d65783deb58df42d22d46b50efa7",
+    "license": "MIT",
+    "reviewed": [
+      "https://ant.design/components/button/",
+      "https://ant.design/components/input/",
+      "https://ant.design/components/modal/",
+      "https://ant.design/docs/react/customize-theme/"
+    ]
+  },
+  "heroUI": {
+    "branch": "v3",
+    "commit": "cc56f50bc1dbcfa50177520e090515ec07728e95",
+    "license": "Apache-2.0 for v3; main branch MIT is NOT the v3 license",
+    "reviewed": [
+      "https://heroui.com/en/docs/react/components/text-field",
+      "https://heroui.com/en/docs/react/getting-started/theming",
+      "https://heroui.com/en/docs/react/releases/v3-0-3",
+      "https://github.com/heroui-inc/heroui/blob/cc56f50bc1dbcfa50177520e090515ec07728e95/packages/styles/components/button.css"
+    ],
+    "buttonCssLinesReviewed": "1-140",
+    "notes": "Official button/modal website requests timed out; button CSS reviewed through GitHub. Other component links are reference-only."
+  },
+  "vueRuntime": {
+    "version": "3.5.13",
+    "license": "MIT",
+    "purpose": "offline browser demo and actual component browser tests; excluded from npm component package",
+    "provenance": "Unmodified upstream Vue production global build present in trame_client distribution; original copyright header retained. SHA-256 recorded by build."
+  },
+  "rekaUI": {
+    "role": "researched as a future adapter; NOT a runtime dependency in v0.1.0",
+    "reviewed": [
+      "https://reka-ui.com/docs/components/dialog",
+      "https://reka-ui.com/docs/components/select"
+    ]
+  }
+}

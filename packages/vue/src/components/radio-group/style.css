@@ -1,0 +1,4 @@
+.yk-radio-group { border:0;margin:0;padding:0;display:flex;gap:16px;flex-wrap:wrap; }
+.yk-radio-group legend { padding:0;margin-bottom:10px; }.yk-radio-group--vertical { flex-direction:column;gap:10px; }
+.yk-radio { display:inline-flex;gap:7px;align-items:center;cursor:pointer; }.yk-radio input { margin:0;width:17px;height:17px;accent-color:var(--yk-primary); }
+.yk-radio input:focus-visible { outline:2px solid var(--yk-focus);outline-offset:3px; }.yk-radio:has(input:disabled) { opacity:.5;cursor:not-allowed; }

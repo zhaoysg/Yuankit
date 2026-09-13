@@ -1,0 +1,48 @@
+{
+  "mode": "HTTP requests to local Node server; not browser navigation",
+  "passed": true,
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 457503,
+      "expected": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/apps/docs/index.html",
+      "status": 200,
+      "bytes": 501,
+      "expected": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/apps/docs/styles.css",
+      "status": 200,
+      "bytes": 56978,
+      "expected": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/vendor/vue-3.5.13.global.prod.js",
+      "status": 200,
+      "bytes": 157924,
+      "expected": 200,
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "bytes": 9,
+      "expected": 404,
+      "contentType": ""
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "bytes": 9,
+      "expected": 404,
+      "contentType": ""
+    }
+  ]
+}

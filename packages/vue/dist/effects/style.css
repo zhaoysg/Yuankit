@@ -1,0 +1,14 @@
+
+/* Effects are optional capabilities, not mandatory animations on every control. */
+.yk-crafted{box-shadow:var(--yk-shadow);position:relative;isolation:isolate;transition:transform var(--yk-craft-duration,240ms) ease,box-shadow var(--yk-craft-duration,240ms) ease}
+@media(hover:hover){
+ .yk-crafted[data-yk-effect="lift"]:not(:disabled):hover{transform:translateY(calc(-1 * var(--yk-craft-hoverLift,4px)))}
+ .yk-crafted[data-yk-effect="glow"]:not(:disabled):hover{box-shadow:0 0 calc(var(--yk-craft-shadow,12px) + 20px) color-mix(in srgb,var(--yk-primary) 32%,transparent)}
+ .yk-crafted[data-yk-effect="shine"]{overflow:hidden}
+ .yk-crafted[data-yk-effect="shine"]::after{content:"";position:absolute;inset:-100% -70%;background:linear-gradient(110deg,transparent 35%,rgb(255 255 255 / .3) 48%,transparent 61%);pointer-events:none;transform:translateX(-100%);z-index:2}
+ .yk-crafted[data-yk-effect="shine"]:not(:disabled):hover::after{animation:yk-craft-shine calc(var(--yk-craft-duration,240ms) + 550ms) ease-out 1}
+}
+@keyframes yk-craft-shine{to{transform:translateX(100%)}}
+[data-yk-motion="false"] .yk-crafted,[data-yk-motion="false"].yk-crafted{transition:none!important;transform:none!important}
+[data-yk-motion="false"] .yk-crafted::after{animation:none!important;content:none!important}
+@media(prefers-reduced-motion:reduce){.yk-crafted{transition:none!important;transform:none!important}.yk-crafted::after{animation:none!important;content:none!important}}

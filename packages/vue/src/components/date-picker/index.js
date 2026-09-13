@@ -1,0 +1,3 @@
+import {defineComponent,h,useId} from 'vue';
+import {useControllable} from '../../shared/control.js';
+export const YkDatePicker=defineComponent({name:'YkDatePicker',props:{modelValue:{type:String,default:undefined},defaultValue:String,label:{type:String,default:'日期'},min:String,max:String,disabled:Boolean,required:Boolean,name:String},emits:['update:modelValue'],setup(p,{emit}){const id=useId(),model=useControllable(p,emit);return()=>h('div',{class:'yk-field'},[h('label',{for:id,class:'yk-field__label'},p.label),h('input',{id,class:'yk-date-picker',type:'date',value:model.value.value,min:p.min,max:p.max,disabled:p.disabled,required:p.required,name:p.name,onInput:e=>model.set(e.target.value)})]);}});

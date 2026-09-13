@@ -1,0 +1,25 @@
+.yk-theme { color:var(--yk-text);font-family:var(--yk-font);font-size:var(--yk-font-size);line-height:var(--yk-line-height);color-scheme:light; }
+.yk-theme[data-yk-mode="dark"] { color-scheme:dark; }
+.yk-theme *, .yk-theme *::before, .yk-theme *::after { box-sizing:border-box; }
+.yk-size--sm { --yk-control-height:var(--yk-height-sm);font-size:12px; }
+.yk-size--md { --yk-control-height:var(--yk-height-md);font-size:14px; }
+.yk-size--lg { --yk-control-height:var(--yk-height-lg);font-size:16px; }
+.yk-sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+.yk-icon-button { appearance:none;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border:0;border-radius:var(--yk-radius-control);background:transparent;color:inherit;cursor:pointer;flex:none; }
+.yk-icon-button:hover { background:var(--yk-muted); }
+.yk-icon-button:focus-visible { outline:var(--yk-focus-width) solid var(--yk-focus);outline-offset:2px; }
+.yk-tone--neutral { --yk-tone:var(--yk-text-muted);--yk-tone-soft:var(--yk-muted); }
+.yk-tone--primary { --yk-tone:var(--yk-primary);--yk-tone-soft:var(--yk-primary-soft); }
+.yk-tone--success { --yk-tone:var(--yk-success);--yk-tone-soft:var(--yk-success-soft); }
+.yk-tone--warning { --yk-tone:var(--yk-warning);--yk-tone-soft:var(--yk-warning-soft); }
+.yk-tone--danger { --yk-tone:var(--yk-danger);--yk-tone-soft:var(--yk-danger-soft); }
+.yk-field { display:flex;flex-direction:column;gap:7px;min-width:0; }
+.yk-field__label { font-size:13px;font-weight:600;line-height:1.5; }
+.yk-required { color:var(--yk-danger); }
+.yk-field__description,.yk-field__error { margin:0;font-size:12px;line-height:1.5; }
+.yk-field__description,.yk-field__count { color:var(--yk-text-muted); }
+.yk-field__error { color:var(--yk-danger); }
+.yk-field--disabled { opacity:.58; }
+.yk-field__count { text-align:right;font-size:12px; }
+@media(prefers-reduced-motion:reduce) { .yk-theme { --yk-duration:0ms; } .yk-spinner,.yk-progress--indeterminate .yk-progress__bar { animation:none!important; } }
+[data-yk-motion="false"] .yk-spinner,[data-yk-motion="false"] .yk-progress--indeterminate .yk-progress__bar { animation:none; }

@@ -1,0 +1,2 @@
+import { defineComponent,h,mergeProps } from 'vue';
+export const YkSeparator=defineComponent({name:'YkSeparator',inheritAttrs:false,props:{orientation:{type:String,default:'horizontal'},decorative:{type:Boolean,default:true}},setup(props,{attrs}){return ()=>h('div',mergeProps(attrs,{role:props.decorative?'none':'separator','aria-orientation':props.decorative?undefined:props.orientation,class:['yk-separator',`yk-separator--${props.orientation}`]}));}});

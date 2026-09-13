@@ -1,0 +1,5 @@
+
+> yuankit-workbench@0.5.0 build
+> node scripts/build.mjs
+
+Built 55 Vue exports; ESM + CSS + global + offline workbench.

@@ -1,0 +1,10 @@
+.yk-switch { display:inline-flex;align-items:center;gap:12px;cursor:pointer; }
+.yk-switch__control { position:relative;display:inline-flex;width:40px;height:24px;flex-shrink:0; }
+.yk-switch input { position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;z-index:1;cursor:inherit; }
+.yk-switch__track { width:40px;height:24px;background:var(--yk-border);border-radius:999px;padding:3px;transition:background var(--yk-duration); }
+.yk-switch__thumb { display:block;width:18px;height:18px;background:var(--yk-surface);border-radius:999px;box-shadow:0 1px 3px rgb(0 0 0 / .15);transition:transform var(--yk-duration); }
+.yk-switch input:checked + .yk-switch__track { background:var(--yk-primary); }
+.yk-switch input:checked + .yk-switch__track .yk-switch__thumb { transform:translateX(16px); }
+.yk-switch input:focus-visible + .yk-switch__track { outline:2px solid var(--yk-focus);outline-offset:3px; }
+.yk-switch__copy { display:flex;flex-direction:column;gap:3px; }.yk-switch small { color:var(--yk-text-muted);font-size:12px; }
+.yk-switch--disabled { opacity:.5;cursor:not-allowed; }

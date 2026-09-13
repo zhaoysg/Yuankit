@@ -1,0 +1,26 @@
+
+> yuankit-workbench@0.2.0 pack:tokens
+> npm pack ./packages/tokens --pack-destination releases
+
+npm notice
+npm notice package: @zhaoysg/yuankit-tokens@0.2.0
+npm notice Tarball Contents
+npm notice 1.1kB LICENSE
+npm notice 647B README.md
+npm notice 600B THIRD_PARTY_NOTICES.md
+npm notice 218B dist/index.d.ts
+npm notice 841B dist/index.js
+npm notice 2.2kB dist/style.css
+npm notice 2.4kB dist/tokens.json
+npm notice 519B package.json
+npm notice Tarball Details
+npm notice name: @zhaoysg/yuankit-tokens
+npm notice version: 0.2.0
+npm notice filename: zhaoysg-yuankit-tokens-0.2.0.tgz
+npm notice package size: 3.5 kB
+npm notice unpacked size: 8.5 kB
+npm notice shasum: 6a8401560ee8490a3f986ba298ed1a1f64be311c
+npm notice integrity: sha512-VN9CudnxCVbBz[...]JP6a/4puxaxKg==
+npm notice total files: 8
+npm notice
+zhaoysg-yuankit-tokens-0.2.0.tgz

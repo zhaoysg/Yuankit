@@ -1,0 +1,260 @@
+
+> yuankit-workbench@0.5.0 test
+> node --test tests/unit/*.test.mjs
+
+TAP version 13
+# Subtest: clamp bounds and non-finite input
+ok 1 - clamp bounds and non-finite input
+  ---
+  duration_ms: 3.673195
+  type: 'test'
+  ...
+# Subtest: contrast black/white and symmetry
+ok 2 - contrast black/white and symmetry
+  ---
+  duration_ms: 0.93687
+  type: 'test'
+  ...
+# Subtest: contrast rejects unsupported color syntaxes
+ok 3 - contrast rejects unsupported color syntaxes
+  ---
+  duration_ms: 5.082115
+  type: 'test'
+  ...
+# Subtest: foreground selects readable primary label
+ok 4 - foreground selects readable primary label
+  ---
+  duration_ms: 0.575912
+  type: 'test'
+  ...
+# Subtest: default palette normal text and key status labels reach 4.5:1
+ok 5 - default palette normal text and key status labels reach 4.5:1
+  ---
+  duration_ms: 0.78994
+  type: 'test'
+  ...
+# Subtest: configuration precedence and inheritance
+ok 6 - configuration precedence and inheritance
+  ---
+  duration_ms: 0.654439
+  type: 'test'
+  ...
+# Subtest: undefined does not erase defaults
+ok 7 - undefined does not erase defaults
+  ---
+  duration_ms: 0.48716
+  type: 'test'
+  ...
+# Subtest: invalid configuration enums are rejected
+ok 8 - invalid configuration enums are rejected
+  ---
+  duration_ms: 0.940236
+  type: 'test'
+  ...
+# Subtest: token allowlist rejects typos and declaration injection
+ok 9 - token allowlist rejects typos and declaration injection
+  ---
+  duration_ms: 2.319942
+  type: 'test'
+  ...
+# Subtest: theme attrs include local motion override
+ok 10 - theme attrs include local motion override
+  ---
+  duration_ms: 1.084058
+  type: 'test'
+  ...
+# Subtest: every public component has source styles types and four-dimensional spec
+ok 11 - every public component has source styles types and four-dimensional spec
+  ---
+  duration_ms: 7.754031
+  type: 'test'
+  ...
+# Subtest: registry identifiers unique
+ok 12 - registry identifiers unique
+  ---
+  duration_ms: 0.630827
+  type: 'test'
+  ...
+# Subtest: exported token names are generated from the source of truth
+ok 13 - exported token names are generated from the source of truth
+  ---
+  duration_ms: 5.354556
+  type: 'test'
+  ...
+# Subtest: package runtime is external Vue, not React or copied upstream runtime
+ok 14 - package runtime is external Vue, not React or copied upstream runtime
+  ---
+  duration_ms: 7.304141
+  type: 'test'
+  ...
+# Subtest: component scaffolder writes a draft, not a public export
+ok 15 - component scaffolder writes a draft, not a public export
+  ---
+  duration_ms: 9.554176
+  type: 'test'
+  ...
+# Subtest: Inspector: 103 real assets across primitives, blocks, templates and motion recipes
+ok 16 - Inspector: 103 real assets across primitives, blocks, templates and motion recipes
+  ---
+  duration_ms: 14.10482
+  type: 'test'
+  ...
+# Subtest: Inspector: every resolved default matches range, type and step definitions
+ok 17 - Inspector: every resolved default matches range, type and step definitions
+  ---
+  duration_ms: 33.73854
+  type: 'test'
+  ...
+# Subtest: Preset: all assets round-trip as valid versioned JSON
+ok 18 - Preset: all assets round-trip as valid versioned JSON
+  ---
+  duration_ms: 10.83179
+  type: 'test'
+  ...
+# Subtest: Configuration: library/global/type/instance precedence and sibling isolation
+ok 19 - Configuration: library/global/type/instance precedence and sibling isolation
+  ---
+  duration_ms: 0.901936
+  type: 'test'
+  ...
+# Subtest: Configuration: a copied preset never mutates its caller
+ok 20 - Configuration: a copied preset never mutates its caller
+  ---
+  duration_ms: 0.355485
+  type: 'test'
+  ...
+# Subtest: Validation: rejects unknown fields, unsupported controls and malformed values
+ok 21 - Validation: rejects unknown fields, unsupported controls and malformed values
+  ---
+  duration_ms: 1.442818
+  type: 'test'
+  ...
+# Subtest: Validation: protects against unknown top-level and prototype keys
+ok 22 - Validation: protects against unknown top-level and prototype keys
+  ---
+  duration_ms: 0.732206
+  type: 'test'
+  ...
+# Subtest: Validation: item keys unique, bounded arrays and safe primitive fields
+ok 23 - Validation: item keys unique, bounded arrays and safe primitive fields
+  ---
+  duration_ms: 0.588957
+  type: 'test'
+  ...
+# Subtest: Preset: size and exact format/version checks
+ok 24 - Preset: size and exact format/version checks
+  ---
+  duration_ms: 1.602674
+  type: 'test'
+  ...
+# Subtest: Theme mapping: zero radius and disabled motion retained; skin and dark defaults actual
+ok 25 - Theme mapping: zero radius and disabled motion retained; skin and dark defaults actual
+  ---
+  duration_ms: 2.076715
+  type: 'test'
+  ...
+# Subtest: Vue export: exact same preset and package entry; script delimiters are escaped
+ok 26 - Vue export: exact same preset and package entry; script delimiters are escaped
+  ---
+  duration_ms: 0.659812
+  type: 'test'
+  ...
+# Subtest: v0.5: 55 public components have concrete sources, types and explicit exports
+ok 27 - v0.5: 55 public components have concrete sources, types and explicit exports
+  ---
+  duration_ms: 4.601604
+  type: 'test'
+  ...
+# Subtest: v0.5: AI, blocks and templates are a partition, not duplicate inflated counts
+ok 28 - v0.5: AI, blocks and templates are a partition, not duplicate inflated counts
+  ---
+  duration_ms: 3.107694
+  type: 'test'
+  ...
+# Subtest: Gallery: 48 unique presets point to real JSON and supported asset fields
+ok 29 - Gallery: 48 unique presets point to real JSON and supported asset fields
+  ---
+  duration_ms: 17.666173
+  type: 'test'
+  ...
+# Subtest: Migration: schema1 versions 0.2 / 0.3 / 0.4 normalize without losing fields
+ok 30 - Migration: schema1 versions 0.2 / 0.3 / 0.4 normalize without losing fields
+  ---
+  duration_ms: 0.614294
+  type: 'test'
+  ...
+# Subtest: Migration: old and future schema/unknown version fail instead of quietly losing configuration
+ok 31 - Migration: old and future schema/unknown version fail instead of quietly losing configuration
+  ---
+  duration_ms: 1.2673
+  type: 'test'
+  ...
+# Subtest: AI payloads: markup remains data and bounded fields reject oversized input
+ok 32 - AI payloads: markup remains data and bounded fields reject oversized input
+  ---
+  duration_ms: 1.093438
+  type: 'test'
+  ...
+# Subtest: Dates: leap years, invalid values and supported Gregorian bounds
+ok 33 - Dates: leap years, invalid values and supported Gregorian bounds
+  ---
+  duration_ms: 1.242736
+  type: 'test'
+  ...
+# Subtest: Dates: month navigation clamps at month end and leap boundaries
+ok 34 - Dates: month navigation clamps at month end and leap boundaries
+  ---
+  duration_ms: 3.502111
+  type: 'test'
+  ...
+# Subtest: Dates: 42 unique contiguous cells and both week starts across 24 months
+ok 35 - Dates: 42 unique contiguous cells and both week starts across 24 months
+  ---
+  duration_ms: 10.837352
+  type: 'test'
+  ...
+# Subtest: Dates: inspector ISO validation and inclusive min/max
+ok 36 - Dates: inspector ISO validation and inclusive min/max
+  ---
+  duration_ms: 1.364926
+  type: 'test'
+  ...
+# Subtest: Links: reject executable, relative, file and embedded credential URLs
+ok 37 - Links: reject executable, relative, file and embedded credential URLs
+  ---
+  duration_ms: 1.423024
+  type: 'test'
+  ...
+# Subtest: Local file selection: extension, MIME wildcard, type rejection and size
+ok 38 - Local file selection: extension, MIME wildcard, type rejection and size
+  ---
+  duration_ms: 1.300602
+  type: 'test'
+  ...
+# Subtest: Local file selection: count and duplicate checks consider existing entries
+ok 39 - Local file selection: count and duplicate checks consider existing entries
+  ---
+  duration_ms: 0.849768
+  type: 'test'
+  ...
+# Subtest: Artifact filenames: strip path/control punctuation and force plain text extension
+ok 40 - Artifact filenames: strip path/control punctuation and force plain text extension
+  ---
+  duration_ms: 1.30526
+  type: 'test'
+  ...
+# Subtest: Pack API: explicit /ai export has types and JS paths; Vue stays a peer
+ok 41 - Pack API: explicit /ai export has types and JS paths; Vue stays a peer
+  ---
+  duration_ms: 0.627411
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 534.773686

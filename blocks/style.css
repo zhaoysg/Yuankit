@@ -1,0 +1,5 @@
+.yk-pattern-stack { display: flex; flex-direction: column; gap: var(--yk-space-4, 16px); }
+.yk-pattern-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.yk-pattern-between { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.yk-pattern-title { font-size: 22px; line-height: 1.45; margin: 8px 0 14px; }
+.yk-pattern-muted { color: var(--yk-text-muted); line-height: 1.8; }

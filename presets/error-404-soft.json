@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.3.0",
+  "asset": "error-404",
+  "settings": {
+    "radius": 24,
+    "primary": "#6750d8",
+    "titleSize": 36,
+    "layout": "split"
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

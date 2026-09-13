@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "hero",
+  "settings": {
+    "radius": 16,
+    "primary": "#6750d8",
+    "surface": "#ffffff",
+    "text": "#252532",
+    "mode": "light",
+    "shadow": 4
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "button",
+  "settings": {
+    "radius": 20,
+    "primary": "#a63c63",
+    "foreground": "#ffffff",
+    "surface": "#fff7fa",
+    "text": "#37232b",
+    "shadow": 8
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

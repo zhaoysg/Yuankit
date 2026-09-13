@@ -1,0 +1,1142 @@
+// Generated from registry/presets.json
+export default [
+  {
+    "id": "button-soft",
+    "asset": "button",
+    "title": "按钮 · 柔和紫",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-soft.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "radius": 16,
+        "primary": "#6750d8",
+        "foreground": "#ffffff",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 4
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-precise",
+    "asset": "button",
+    "title": "按钮 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "foreground": "#ffffff",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-ink",
+    "asset": "button",
+    "title": "按钮 · 墨黑",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-ink.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "radius": 8,
+        "primary": "#242830",
+        "foreground": "#ffffff",
+        "surface": "#ffffff",
+        "text": "#20242b",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-ocean",
+    "asset": "button",
+    "title": "按钮 · 海盐蓝",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-ocean.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "radius": 12,
+        "primary": "#175ba6",
+        "foreground": "#ffffff",
+        "surface": "#f5f9ff",
+        "text": "#18283b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-rose",
+    "asset": "button",
+    "title": "按钮 · 玫瑰",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-rose.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "radius": 20,
+        "primary": "#a63c63",
+        "foreground": "#ffffff",
+        "surface": "#fff7fa",
+        "text": "#37232b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-night",
+    "asset": "button",
+    "title": "按钮 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "foreground": "#1b1629",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "input-soft",
+    "asset": "input",
+    "title": "输入框 · 柔和紫",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/input-soft.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "input",
+      "settings": {
+        "radius": 16,
+        "primary": "#6750d8",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "input-precise",
+    "asset": "input",
+    "title": "输入框 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/input-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "input",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "input-ink",
+    "asset": "input",
+    "title": "输入框 · 墨黑",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/input-ink.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "input",
+      "settings": {
+        "radius": 8,
+        "primary": "#242830",
+        "surface": "#ffffff",
+        "text": "#20242b"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "input-ocean",
+    "asset": "input",
+    "title": "输入框 · 海盐蓝",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/input-ocean.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "input",
+      "settings": {
+        "radius": 12,
+        "primary": "#175ba6",
+        "surface": "#f5f9ff",
+        "text": "#18283b"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "input-rose",
+    "asset": "input",
+    "title": "输入框 · 玫瑰",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/input-rose.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "input",
+      "settings": {
+        "radius": 20,
+        "primary": "#a63c63",
+        "surface": "#fff7fa",
+        "text": "#37232b"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "input-night",
+    "asset": "input",
+    "title": "输入框 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/input-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "input",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "card-soft",
+    "asset": "card",
+    "title": "卡片 · 柔和紫",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/card-soft.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "card",
+      "settings": {
+        "radius": 16,
+        "primary": "#6750d8",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 4
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "card-precise",
+    "asset": "card",
+    "title": "卡片 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/card-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "card",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "card-ink",
+    "asset": "card",
+    "title": "卡片 · 墨黑",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/card-ink.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "card",
+      "settings": {
+        "radius": 8,
+        "primary": "#242830",
+        "surface": "#ffffff",
+        "text": "#20242b",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "card-ocean",
+    "asset": "card",
+    "title": "卡片 · 海盐蓝",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/card-ocean.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "card",
+      "settings": {
+        "radius": 12,
+        "primary": "#175ba6",
+        "surface": "#f5f9ff",
+        "text": "#18283b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "card-rose",
+    "asset": "card",
+    "title": "卡片 · 玫瑰",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/card-rose.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "card",
+      "settings": {
+        "radius": 20,
+        "primary": "#a63c63",
+        "surface": "#fff7fa",
+        "text": "#37232b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "card-night",
+    "asset": "card",
+    "title": "卡片 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/card-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "card",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "hero-soft",
+    "asset": "hero",
+    "title": "首页首屏 · 柔和紫",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/hero-soft.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "hero",
+      "settings": {
+        "radius": 16,
+        "primary": "#6750d8",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 4
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "hero-precise",
+    "asset": "hero",
+    "title": "首页首屏 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/hero-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "hero",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "hero-ink",
+    "asset": "hero",
+    "title": "首页首屏 · 墨黑",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/hero-ink.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "hero",
+      "settings": {
+        "radius": 8,
+        "primary": "#242830",
+        "surface": "#ffffff",
+        "text": "#20242b",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "hero-ocean",
+    "asset": "hero",
+    "title": "首页首屏 · 海盐蓝",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/hero-ocean.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "hero",
+      "settings": {
+        "radius": 12,
+        "primary": "#175ba6",
+        "surface": "#f5f9ff",
+        "text": "#18283b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "hero-rose",
+    "asset": "hero",
+    "title": "首页首屏 · 玫瑰",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/hero-rose.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "hero",
+      "settings": {
+        "radius": 20,
+        "primary": "#a63c63",
+        "surface": "#fff7fa",
+        "text": "#37232b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "hero-night",
+    "asset": "hero",
+    "title": "首页首屏 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/hero-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "hero",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-prompt-input-soft",
+    "asset": "ai-prompt-input",
+    "title": "提示词输入 · 柔和紫",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-prompt-input-soft.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-prompt-input",
+      "settings": {
+        "radius": 16,
+        "primary": "#6750d8",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 4
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-prompt-input-precise",
+    "asset": "ai-prompt-input",
+    "title": "提示词输入 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-prompt-input-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-prompt-input",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-prompt-input-ink",
+    "asset": "ai-prompt-input",
+    "title": "提示词输入 · 墨黑",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-prompt-input-ink.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-prompt-input",
+      "settings": {
+        "radius": 8,
+        "primary": "#242830",
+        "surface": "#ffffff",
+        "text": "#20242b",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-prompt-input-ocean",
+    "asset": "ai-prompt-input",
+    "title": "提示词输入 · 海盐蓝",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-prompt-input-ocean.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-prompt-input",
+      "settings": {
+        "radius": 12,
+        "primary": "#175ba6",
+        "surface": "#f5f9ff",
+        "text": "#18283b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-prompt-input-rose",
+    "asset": "ai-prompt-input",
+    "title": "提示词输入 · 玫瑰",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-prompt-input-rose.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-prompt-input",
+      "settings": {
+        "radius": 20,
+        "primary": "#a63c63",
+        "surface": "#fff7fa",
+        "text": "#37232b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-prompt-input-night",
+    "asset": "ai-prompt-input",
+    "title": "提示词输入 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-prompt-input-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-prompt-input",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-message-soft",
+    "asset": "ai-message",
+    "title": "AI 消息 · 柔和紫",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-message-soft.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-message",
+      "settings": {
+        "radius": 16,
+        "primary": "#6750d8",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 4
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-message-precise",
+    "asset": "ai-message",
+    "title": "AI 消息 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-message-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-message",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-message-ink",
+    "asset": "ai-message",
+    "title": "AI 消息 · 墨黑",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-message-ink.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-message",
+      "settings": {
+        "radius": 8,
+        "primary": "#242830",
+        "surface": "#ffffff",
+        "text": "#20242b",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-message-ocean",
+    "asset": "ai-message",
+    "title": "AI 消息 · 海盐蓝",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-message-ocean.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-message",
+      "settings": {
+        "radius": 12,
+        "primary": "#175ba6",
+        "surface": "#f5f9ff",
+        "text": "#18283b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-message-rose",
+    "asset": "ai-message",
+    "title": "AI 消息 · 玫瑰",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-message-rose.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-message",
+      "settings": {
+        "radius": 20,
+        "primary": "#a63c63",
+        "surface": "#fff7fa",
+        "text": "#37232b",
+        "shadow": 8
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-message-night",
+    "asset": "ai-message",
+    "title": "AI 消息 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-message-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-message",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-capsule",
+    "asset": "button",
+    "title": "胶囊主按钮",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-capsule.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "radius": 60,
+        "primary": "#28242e",
+        "foreground": "#ffffff",
+        "controlHeight": 48,
+        "effect": "lift"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-gradient",
+    "asset": "button",
+    "title": "渐变按钮",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-gradient.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "gradient": true,
+        "radius": 18,
+        "primary": "#6750d8",
+        "gradientEnd": "#b64b86",
+        "foreground": "#ffffff",
+        "variant": "primary"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-outline",
+    "asset": "button",
+    "title": "细边框按钮",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-outline.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "variant": "outline",
+        "radius": 8,
+        "borderWidth": 1,
+        "shadow": 0,
+        "surface": "#ffffff"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "button-glow",
+    "asset": "button",
+    "title": "柔光按钮",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/button-glow.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "button",
+      "settings": {
+        "primary": "#6750d8",
+        "foreground": "#ffffff",
+        "effect": "glow",
+        "shadow": 12
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "navbar-precise",
+    "asset": "navbar",
+    "title": "导航栏 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/navbar-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "navbar",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "navbar-night",
+    "asset": "navbar",
+    "title": "导航栏 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/navbar-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "navbar",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "error-404-precise",
+    "asset": "error-404",
+    "title": "404 页面 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/error-404-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "error-404",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light"
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "error-404-night",
+    "asset": "error-404",
+    "title": "404 页面 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/error-404-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "error-404",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-chat-page-precise",
+    "asset": "ai-chat-page",
+    "title": "AI 对话页面 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-chat-page-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-chat-page",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-chat-page-night",
+    "asset": "ai-chat-page",
+    "title": "AI 对话页面 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-chat-page-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-chat-page",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-workspace-precise",
+    "asset": "ai-workspace",
+    "title": "AI 创作工作台 · 利落绿",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-workspace-precise.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-workspace",
+      "settings": {
+        "radius": 4,
+        "primary": "#255b4c",
+        "surface": "#ffffff",
+        "text": "#252532",
+        "mode": "light",
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  },
+  {
+    "id": "ai-workspace-night",
+    "asset": "ai-workspace",
+    "title": "AI 创作工作台 · 深夜",
+    "description": "参数预设 · 不新增重复组件",
+    "file": "presets/gallery/ai-workspace-night.json",
+    "preset": {
+      "schemaVersion": 1,
+      "libraryVersion": "0.5.0",
+      "asset": "ai-workspace",
+      "settings": {
+        "mode": "dark",
+        "primary": "#b4a5f3",
+        "surface": "#202029",
+        "text": "#efedf5",
+        "border": "#474450",
+        "radius": 14,
+        "shadow": 0
+      },
+      "designSystem": {
+        "global": {},
+        "components": {}
+      }
+    }
+  }
+]
+;

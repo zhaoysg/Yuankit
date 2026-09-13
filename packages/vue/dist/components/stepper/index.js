@@ -1,0 +1,2 @@
+import {defineComponent,h,mergeProps} from 'vue';
+export const YkStepper=defineComponent({name:'YkStepper',inheritAttrs:false,props:{items:{type:Array,default:()=>[]},current:{type:Number,default:1}},setup(p,{attrs}){return()=>h('ol',mergeProps(attrs,{class:'yk-stepper','aria-label':'步骤'}),p.items.map((i,idx)=>h('li',{class:{'is-active':idx+1===p.current,'is-done':idx+1<p.current}},[h('span',{class:'yk-stepper__dot'},idx+1),h('span',{},i.label)])));}});

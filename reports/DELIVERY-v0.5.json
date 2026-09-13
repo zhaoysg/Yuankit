@@ -1,0 +1,65 @@
+{
+  "version": "0.5.0",
+  "generatedAt": "2026-09-12T08:13:02.136572+00:00",
+  "assets": {
+    "total": 103,
+    "groups": {
+      "基础组件": 42,
+      "配置容器": 1,
+      "页面区块": 17,
+      "页面模板": 15,
+      "动效方案": 16,
+      "AI 界面": 12
+    }
+  },
+  "stylePresets": 48,
+  "globalComponents": 55,
+  "inspirationSources": 27,
+  "validation": {
+    "node": {
+      "passed": 41,
+      "failed": 0
+    },
+    "chromium": {
+      "original": 29,
+      "studio": 21,
+      "v05": 33,
+      "total": 83,
+      "failed": 0
+    },
+    "aiEntryInMemory": true,
+    "aiEntryFileOrigin": "blocked-by-administrator; not verified",
+    "fullSFCTypecheck": false,
+    "SSR": false,
+    "SafariFirefox": false,
+    "remoteCI": false,
+    "npmCleanInstall": "not completed; DNS unavailable; preinstalled TypeScript 5.8.3 used"
+  },
+  "delivery": {
+    "githubPushed": false,
+    "npmRegistryPublished": false,
+    "liveAIBackend": false
+  },
+  "packages": [
+    {
+      "file": "releases/zhaoysg-yuankit-tokens-0.5.0.tgz",
+      "bytes": 3737,
+      "sha256": "09d50678ff8c2f8b243bab161ea04b9fd534412c4883e2ce097968bf480a85c0",
+      "entries": 8,
+      "relativeImportsVerified": 0,
+      "noBundledVue": true,
+      "noNodeModulesOrVendorOrDotEnv": true
+    },
+    {
+      "file": "releases/zhaoysg-yuankit-vue-0.5.0.tgz",
+      "bytes": 204609,
+      "sha256": "d4a561acabca997e4707213268444256bf05a4a90dac18f9f1a3364422d6c0b4",
+      "entries": 220,
+      "relativeImportsVerified": 250,
+      "noBundledVue": true,
+      "noNodeModulesOrVendorOrDotEnv": true
+    }
+  ],
+  "previewSha256": "6c9d68eb4eaf2fe46e93c1c2f771183f24a0bf1068d8bc9d0ad4bbf3a0f78898",
+  "aiPreviewSha256": "8e47a590ab0663f29170ef7b4592aad28993ae7bd1d5a069ff783daa21824cbe"
+}

@@ -1,0 +1,1 @@
+.yk-scroll-area{overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:6px}.yk-scroll-area::-webkit-scrollbar{width:10px}.yk-scroll-area::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--yk-text-muted) 35%,transparent);border:3px solid transparent;background-clip:padding-box;border-radius:999px}

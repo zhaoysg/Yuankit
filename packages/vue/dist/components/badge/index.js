@@ -1,0 +1,2 @@
+import { defineComponent,h,mergeProps } from 'vue';
+export const YkBadge=defineComponent({name:'YkBadge',inheritAttrs:false,props:{tone:{type:String,default:'neutral'},variant:{type:String,default:'soft'},dot:Boolean},setup(props,{slots,attrs}){return ()=>h('span',mergeProps(attrs,{class:['yk-badge',`yk-tone--${props.tone}`,`yk-badge--${props.variant}`]}),[props.dot?h('span',{class:'yk-badge__dot','aria-hidden':'true'}):null,slots.default?.()]);}});

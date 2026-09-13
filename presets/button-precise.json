@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.3.0",
+  "asset": "button",
+  "settings": {
+    "radius": 4,
+    "variant": "outline",
+    "label": "查看详情"
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

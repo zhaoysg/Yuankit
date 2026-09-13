@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.3.0",
+  "asset": "hero",
+  "settings": {
+    "mode": "dark",
+    "radius": 24,
+    "layout": "split",
+    "primary": "#ad9df8"
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

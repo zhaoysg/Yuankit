@@ -1,0 +1,57 @@
+
+> yuankit-workbench@0.2.0 test:browser
+> python tests/browser/run.py && python tests/browser/studio.py
+
+PASS Button: default type, keyboard activation, loading and disabled guard
+PASS Input: controlled v-model, clear and focus return
+PASS Input: native attributes and composed description/error IDs
+PASS Input: IME composition is not emitted before compositionend
+PASS Input: readonly default value cannot be edited or cleared
+PASS Textarea: native maxlength and count update
+PASS Checkbox: native form value, Space and indeterminate
+PASS Switch: keyboard and form serialization
+PASS RadioGroup: arrow navigation skips disabled options
+PASS Select: controlled option selection and disabled option
+PASS Dialog: title, Escape, focus restoration and scroll unlock
+PASS Dialog: controlled close veto keeps dialog open
+PASS Dialog: backdrop pointer hit-testing closes only outside
+PASS Dialog: nested scroll locks and unmount cleanup
+PASS Tabs: automatic keyboard activation, disabled skip and ARIA linkage
+PASS Tabs: manual activation preserves content until Enter
+PASS Tooltip: focus, describedby, Escape and dark portal inheritance
+PASS Tooltip: hover keeps bubble visible and works in modal top layer
+PASS Alert: semantic role, dismiss and emitted event
+PASS Avatar: accessible fallback after image failure
+PASS Progress: clamped and indeterminate ARIA
+PASS Card, Badge and Separator: slots and structural semantics
+PASS ConfigProvider: nested config, token and component prop precedence
+PASS Workbench: all registered component pages and API/spec routes render
+PASS Workbench: theme switching, override and valid JSON export
+PASS Workbench: pattern form validation and non-server save feedback
+PASS Workbench: desktop screenshot, search and skip link
+PASS Workbench: mobile menu, keyboard hiding and no horizontal page overflow
+PASS Reduced motion respects OS preference and explicit configuration
+
+29/29 passed; 0 failed
+PASS New primitives: range native keyboard and controlled value
+PASS New primitives: accordion keyboard, expanded panel, single-open
+PASS New primitives: breadcrumb and pagination navigate with proper boundaries
+PASS New primitives: skeleton and empty-state semantics/action
+PASS Studio: all 31 assets render from real implementation without JS errors
+PASS Inspector: width, height, radius zero and font sliders change computed styles
+PASS Inspector: color, skin, shadow and gradient affect rendered button
+PASS Inspector: local/type/global scopes do not leak into sibling assets
+PASS Inspector: undo/redo/reset restore only selected configuration level
+PASS Inspector: editing text is escaped; content is not executed
+PASS Inspector: item labels and count modify real tabs
+PASS Studio: JSON export/import round-trip and invalid import is non-destructive
+PASS Studio: Vue code export uses the same edited settings
+PASS Studio: named presets save/load/delete in session; denied storage warning honest
+PASS Assets: 404 primary and secondary actions are explicit events, not fake navigation
+PASS Assets: responsive navbar opens/collapses and emits navigation
+PASS Assets: real modal follows local radius/padding and restores trigger focus
+PASS Effects: hover lift works; OS reduced-motion and explicit disabled motion stop it
+PASS Studio: preview viewport and actual mobile page do not overflow horizontally
+PASS Studio: source notes and retained legacy component docs accessible
+PASS Studio: visual evidence desktop button, 404, dark card and code
+21/21 passed

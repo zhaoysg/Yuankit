@@ -1,0 +1,48 @@
+[
+  {
+    "id": "settings-panel",
+    "name": "SettingsPanel",
+    "title": "工作空间设置",
+    "entry": "blocks/settings-panel/index.js",
+    "styles": [
+      "blocks/style.css"
+    ],
+    "events": {
+      "save": "{name:string,email:string,role:string,notifications:boolean}"
+    },
+    "dependencies": [
+      "YkCard",
+      "YkInput",
+      "YkSelect",
+      "YkSwitch",
+      "YkButton",
+      "YkAlert"
+    ],
+    "persistence": "none; caller handles save event"
+  },
+  {
+    "id": "content-card",
+    "name": "ContentCard",
+    "title": "内容卡片",
+    "entry": "blocks/content-card/index.js",
+    "styles": [
+      "blocks/style.css"
+    ],
+    "props": [
+      "title",
+      "excerpt",
+      "author"
+    ],
+    "events": {
+      "open": "void"
+    },
+    "dependencies": [
+      "YkCard",
+      "YkBadge",
+      "YkAvatar",
+      "YkButton",
+      "YkSeparator"
+    ],
+    "persistence": "none"
+  }
+]

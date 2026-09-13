@@ -1,0 +1,176 @@
+{
+  "version": "0.5.0",
+  "date": "2026-09-13T02:45:31.506472+00:00",
+  "browser": "Chromium 152.0.7977.84",
+  "vue": "3.5.13",
+  "total": 33,
+  "passed": 33,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "Combobox: external selection synchronizes; keyboard skips disabled; Esc closes",
+      "status": "passed",
+      "durationMs": 440
+    },
+    {
+      "name": "Combobox: disabled instance cannot select or change value",
+      "status": "passed",
+      "durationMs": 191
+    },
+    {
+      "name": "Popover: two instances isolate outside clicks and return focus on Escape",
+      "status": "passed",
+      "durationMs": 289
+    },
+    {
+      "name": "Calendar: leap-year keyboard selection and month-change clamp",
+      "status": "passed",
+      "durationMs": 323
+    },
+    {
+      "name": "Calendar: inclusive minimum/maximum restrict clicks and navigation",
+      "status": "passed",
+      "durationMs": 244
+    },
+    {
+      "name": "Native date field: controlled ISO input and FormData binding",
+      "status": "passed",
+      "durationMs": 251
+    },
+    {
+      "name": "File selection: accepted types, rejection, no uploads and remove",
+      "status": "passed",
+      "durationMs": 423
+    },
+    {
+      "name": "Tree: keyboard expand, skip disabled and select leaf",
+      "status": "passed",
+      "durationMs": 267
+    },
+    {
+      "name": "Carousel: manual boundaries and loop behavior, no autoplay",
+      "status": "passed",
+      "durationMs": 349
+    },
+    {
+      "name": "Toast: timer pauses while pointer OR keyboard focus remains inside",
+      "status": "passed",
+      "durationMs": 1848
+    },
+    {
+      "name": "Command: search, disabled skip, select event and focus restoration",
+      "status": "passed",
+      "durationMs": 403
+    },
+    {
+      "name": "Sidebar: collapse and navigation are actual stateful controls",
+      "status": "passed",
+      "durationMs": 317
+    },
+    {
+      "name": "Chart: finite negative data, line switch and readable table",
+      "status": "passed",
+      "durationMs": 196
+    },
+    {
+      "name": "Tags: IME guard, Enter add, duplicate rejection and Backspace remove",
+      "status": "passed",
+      "durationMs": 332
+    },
+    {
+      "name": "AI message: escaped markup, feedback toggle, clipboard failure and retry",
+      "status": "passed",
+      "durationMs": 449
+    },
+    {
+      "name": "AI prompt: Enter and IME composition, Shift+Enter, busy stop",
+      "status": "passed",
+      "durationMs": 405
+    },
+    {
+      "name": "AI prompt: attachment local selection, submit metadata and exposed clear",
+      "status": "passed",
+      "durationMs": 355
+    },
+    {
+      "name": "AI prompt: modifier Enter mode and disabled send",
+      "status": "passed",
+      "durationMs": 303
+    },
+    {
+      "name": "AI conversation: follow new data, respect reading position and return latest",
+      "status": "passed",
+      "durationMs": 687
+    },
+    {
+      "name": "AI tool: approval emits once, state controlled by app and text escaped",
+      "status": "passed",
+      "durationMs": 310
+    },
+    {
+      "name": "AI sources: unsafe URLs never become active anchors",
+      "status": "passed",
+      "durationMs": 377
+    },
+    {
+      "name": "AI artifact: literal code, safe .txt export and summary tab",
+      "status": "passed",
+      "durationMs": 454
+    },
+    {
+      "name": "AI usage: bounded progress, over-limit signal, no token computation",
+      "status": "passed",
+      "durationMs": 291
+    },
+    {
+      "name": "AI knowledge panel: local search and selection, safe link filtering",
+      "status": "passed",
+      "durationMs": 362
+    },
+    {
+      "name": "AI chat page: real local flow, stop, explicit demo boundary and no network",
+      "status": "passed",
+      "durationMs": 1083
+    },
+    {
+      "name": "AI chat page: forced error then retry and history switching",
+      "status": "passed",
+      "durationMs": 1100
+    },
+    {
+      "name": "Studio: curated gallery 48 real presets render and apply without changing global",
+      "status": "passed",
+      "durationMs": 781
+    },
+    {
+      "name": "Studio: AI inspector edits actual bubble radius and avatar visibility",
+      "status": "passed",
+      "durationMs": 859
+    },
+    {
+      "name": "Studio: v0.4 JSON migrates and exports as v0.5 preserving styles",
+      "status": "passed",
+      "durationMs": 668
+    },
+    {
+      "name": "Studio: editable item content changes actual citation link",
+      "status": "passed",
+      "durationMs": 773
+    },
+    {
+      "name": "Motion: replay callback does not use detached event.currentTarget",
+      "status": "passed",
+      "durationMs": 1043
+    },
+    {
+      "name": "AI desktop and mobile layouts: real screenshots and no horizontal overflow",
+      "status": "passed",
+      "durationMs": 1963
+    },
+    {
+      "name": "Reduced motion: streaming cursor respects operating system preference",
+      "status": "passed",
+      "durationMs": 217
+    }
+  ]
+}

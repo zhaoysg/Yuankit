@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-09-13T02:44:08.970714+00:00",
+  "vue": "3.5.13",
+  "browser": "Chromium 152.0.7977.84",
+  "mode": "real compiled Vue render functions; in-memory HTML with no network",
+  "passed": 29,
+  "failed": 0,
+  "total": 29,
+  "tests": [
+    {
+      "name": "Button: default type, keyboard activation, loading and disabled guard",
+      "status": "passed",
+      "durationMs": 220
+    },
+    {
+      "name": "Input: controlled v-model, clear and focus return",
+      "status": "passed",
+      "durationMs": 241
+    },
+    {
+      "name": "Input: native attributes and composed description/error IDs",
+      "status": "passed",
+      "durationMs": 193
+    },
+    {
+      "name": "Input: IME composition is not emitted before compositionend",
+      "status": "passed",
+      "durationMs": 202
+    },
+    {
+      "name": "Input: readonly default value cannot be edited or cleared",
+      "status": "passed",
+      "durationMs": 195
+    },
+    {
+      "name": "Textarea: native maxlength and count update",
+      "status": "passed",
+      "durationMs": 192
+    },
+    {
+      "name": "Checkbox: native form value, Space and indeterminate",
+      "status": "passed",
+      "durationMs": 203
+    },
+    {
+      "name": "Switch: keyboard and form serialization",
+      "status": "passed",
+      "durationMs": 202
+    },
+    {
+      "name": "RadioGroup: arrow navigation skips disabled options",
+      "status": "passed",
+      "durationMs": 201
+    },
+    {
+      "name": "Select: controlled option selection and disabled option",
+      "status": "passed",
+      "durationMs": 196
+    },
+    {
+      "name": "Dialog: title, Escape, focus restoration and scroll unlock",
+      "status": "passed",
+      "durationMs": 275
+    },
+    {
+      "name": "Dialog: controlled close veto keeps dialog open",
+      "status": "passed",
+      "durationMs": 182
+    },
+    {
+      "name": "Dialog: backdrop pointer hit-testing closes only outside",
+      "status": "passed",
+      "durationMs": 247
+    },
+    {
+      "name": "Dialog: nested scroll locks and unmount cleanup",
+      "status": "passed",
+      "durationMs": 381
+    },
+    {
+      "name": "Tabs: automatic keyboard activation, disabled skip and ARIA linkage",
+      "status": "passed",
+      "durationMs": 220
+    },
+    {
+      "name": "Tabs: manual activation preserves content until Enter",
+      "status": "passed",
+      "durationMs": 203
+    },
+    {
+      "name": "Tooltip: focus, describedby, Escape and dark portal inheritance",
+      "status": "passed",
+      "durationMs": 260
+    },
+    {
+      "name": "Tooltip: hover keeps bubble visible and works in modal top layer",
+      "status": "passed",
+      "durationMs": 589
+    },
+    {
+      "name": "Alert: semantic role, dismiss and emitted event",
+      "status": "passed",
+      "durationMs": 212
+    },
+    {
+      "name": "Avatar: accessible fallback after image failure",
+      "status": "passed",
+      "durationMs": 271
+    },
+    {
+      "name": "Progress: clamped and indeterminate ARIA",
+      "status": "passed",
+      "durationMs": 176
+    },
+    {
+      "name": "Card, Badge and Separator: slots and structural semantics",
+      "status": "passed",
+      "durationMs": 199
+    },
+    {
+      "name": "ConfigProvider: nested config, token and component prop precedence",
+      "status": "passed",
+      "durationMs": 198
+    },
+    {
+      "name": "Workbench: all registered component pages and API/spec routes render",
+      "status": "passed",
+      "durationMs": 8817
+    },
+    {
+      "name": "Workbench: theme switching, override and valid JSON export",
+      "status": "passed",
+      "durationMs": 848
+    },
+    {
+      "name": "Workbench: pattern form validation and non-server save feedback",
+      "status": "passed",
+      "durationMs": 739
+    },
+    {
+      "name": "Workbench: desktop screenshot, search and skip link",
+      "status": "passed",
+      "durationMs": 893
+    },
+    {
+      "name": "Workbench: mobile menu, keyboard hiding and no horizontal page overflow",
+      "status": "passed",
+      "durationMs": 930
+    },
+    {
+      "name": "Reduced motion respects OS preference and explicit configuration",
+      "status": "passed",
+      "durationMs": 170
+    }
+  ],
+  "notCovered": [
+    "Safari/Firefox",
+    "Screen-reader or full WCAG audit",
+    "Pixel matching to upstream websites",
+    "Real Vue SFC consumer type-check/build",
+    "npm registry publishing or GitHub remote CI"
+  ]
+}

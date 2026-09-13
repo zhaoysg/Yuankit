@@ -1,0 +1,20 @@
+[
+  {
+    "file": "releases/zhaoysg-yuankit-tokens-0.2.0.tgz",
+    "bytes": 3521,
+    "sha256": "62b749842c0723ab65811718bad8479ebccdc17587739a2528ba38083addb29f",
+    "entries": 8,
+    "relativeImportsVerified": 0,
+    "noBundledVue": true,
+    "noNodeModulesOrVendorOrDotEnv": true
+  },
+  {
+    "file": "releases/zhaoysg-yuankit-vue-0.2.0.tgz",
+    "bytes": 75745,
+    "sha256": "0d54e06e42cbd2e0f8d55a06c61dce8d638b0cfc6291bfd1681a62d45b0da6d2",
+    "entries": 105,
+    "relativeImportsVerified": 96,
+    "noBundledVue": true,
+    "noNodeModulesOrVendorOrDotEnv": true
+  }
+]

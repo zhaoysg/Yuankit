@@ -1,0 +1,3 @@
+import {defineComponent,h} from 'vue';
+import {formatBytes} from '../../shared/safety.js';
+export const YkAIAttachments=defineComponent({name:'YkAIAttachments',props:{items:{type:Array,default:()=>[]},removable:{type:Boolean,default:true},disabled:Boolean},emits:['remove'],setup(p,{emit}){return()=>h('ul',{class:'yk-ai-attachments','aria-label':'附件列表'},p.items.map(item=>h('li',{key:item.id},[h('span',{class:'yk-ai-attachments__icon','aria-hidden':'true'},'▧'),h('div',{},[h('strong',{},item.name),h('small',{},formatBytes(item.size))]),p.removable?h('button',{type:'button',disabled:p.disabled,'aria-label':'移除附件 '+item.name,onClick:()=>emit('remove',item.id)},'×'):null])));}});

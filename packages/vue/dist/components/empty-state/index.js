@@ -1,0 +1,3 @@
+import { defineComponent,h,mergeProps } from 'vue';
+import { YkButton } from '../button/index.js';
+export const YkEmptyState=defineComponent({name:'YkEmptyState',inheritAttrs:false,props:{title:{type:String,default:'这里还没有内容'},description:{type:String,default:'创建第一个项目，开始积累你的设计资产。'},actionLabel:{type:String,default:'新建项目'}},emits:['action'],setup(p,{attrs,slots,emit}){return ()=>h('section',mergeProps(attrs,{class:'yk-empty-state'}),[slots.illustration?.()??h('div',{class:'yk-empty-state__mark','aria-hidden':'true'},'◇'),h('h3',{},p.title),h('p',{},p.description),slots.actions?.()??(p.actionLabel?h(YkButton,{onClick:()=>emit('action')},()=>p.actionLabel):null)]);}});

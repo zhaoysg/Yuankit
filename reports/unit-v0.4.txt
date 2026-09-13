@@ -1,0 +1,170 @@
+
+> yuankit-workbench@0.4.0 test
+> node --test tests/unit/*.test.mjs
+
+TAP version 13
+# Subtest: clamp bounds and non-finite input
+ok 1 - clamp bounds and non-finite input
+  ---
+  duration_ms: 2.23714
+  type: 'test'
+  ...
+# Subtest: contrast black/white and symmetry
+ok 2 - contrast black/white and symmetry
+  ---
+  duration_ms: 0.394137
+  type: 'test'
+  ...
+# Subtest: contrast rejects unsupported color syntaxes
+ok 3 - contrast rejects unsupported color syntaxes
+  ---
+  duration_ms: 0.51936
+  type: 'test'
+  ...
+# Subtest: foreground selects readable primary label
+ok 4 - foreground selects readable primary label
+  ---
+  duration_ms: 0.268301
+  type: 'test'
+  ...
+# Subtest: default palette normal text and key status labels reach 4.5:1
+ok 5 - default palette normal text and key status labels reach 4.5:1
+  ---
+  duration_ms: 0.390349
+  type: 'test'
+  ...
+# Subtest: configuration precedence and inheritance
+ok 6 - configuration precedence and inheritance
+  ---
+  duration_ms: 0.357608
+  type: 'test'
+  ...
+# Subtest: undefined does not erase defaults
+ok 7 - undefined does not erase defaults
+  ---
+  duration_ms: 0.282167
+  type: 'test'
+  ...
+# Subtest: invalid configuration enums are rejected
+ok 8 - invalid configuration enums are rejected
+  ---
+  duration_ms: 0.331049
+  type: 'test'
+  ...
+# Subtest: token allowlist rejects typos and declaration injection
+ok 9 - token allowlist rejects typos and declaration injection
+  ---
+  duration_ms: 1.143557
+  type: 'test'
+  ...
+# Subtest: theme attrs include local motion override
+ok 10 - theme attrs include local motion override
+  ---
+  duration_ms: 0.538325
+  type: 'test'
+  ...
+# Subtest: every public component has source styles types and four-dimensional spec
+ok 11 - every public component has source styles types and four-dimensional spec
+  ---
+  duration_ms: 1.871587
+  type: 'test'
+  ...
+# Subtest: registry identifiers unique
+ok 12 - registry identifiers unique
+  ---
+  duration_ms: 0.167794
+  type: 'test'
+  ...
+# Subtest: exported token names are generated from the source of truth
+ok 13 - exported token names are generated from the source of truth
+  ---
+  duration_ms: 0.344253
+  type: 'test'
+  ...
+# Subtest: package runtime is external Vue, not React or copied upstream runtime
+ok 14 - package runtime is external Vue, not React or copied upstream runtime
+  ---
+  duration_ms: 0.755301
+  type: 'test'
+  ...
+# Subtest: component scaffolder writes a draft, not a public export
+ok 15 - component scaffolder writes a draft, not a public export
+  ---
+  duration_ms: 6.816345
+  type: 'test'
+  ...
+# Subtest: Inspector: 77 real assets across primitives, blocks, templates and motion recipes
+ok 16 - Inspector: 77 real assets across primitives, blocks, templates and motion recipes
+  ---
+  duration_ms: 2.662274
+  type: 'test'
+  ...
+# Subtest: Inspector: every resolved default matches range, type and step definitions
+ok 17 - Inspector: every resolved default matches range, type and step definitions
+  ---
+  duration_ms: 7.390999
+  type: 'test'
+  ...
+# Subtest: Preset: all assets round-trip as valid versioned JSON
+ok 18 - Preset: all assets round-trip as valid versioned JSON
+  ---
+  duration_ms: 2.192887
+  type: 'test'
+  ...
+# Subtest: Configuration: library/global/type/instance precedence and sibling isolation
+ok 19 - Configuration: library/global/type/instance precedence and sibling isolation
+  ---
+  duration_ms: 0.427789
+  type: 'test'
+  ...
+# Subtest: Configuration: a copied preset never mutates its caller
+ok 20 - Configuration: a copied preset never mutates its caller
+  ---
+  duration_ms: 0.271227
+  type: 'test'
+  ...
+# Subtest: Validation: rejects unknown fields, unsupported controls and malformed values
+ok 21 - Validation: rejects unknown fields, unsupported controls and malformed values
+  ---
+  duration_ms: 0.971766
+  type: 'test'
+  ...
+# Subtest: Validation: protects against unknown top-level and prototype keys
+ok 22 - Validation: protects against unknown top-level and prototype keys
+  ---
+  duration_ms: 0.33715
+  type: 'test'
+  ...
+# Subtest: Validation: item keys unique, bounded arrays and safe primitive fields
+ok 23 - Validation: item keys unique, bounded arrays and safe primitive fields
+  ---
+  duration_ms: 0.315509
+  type: 'test'
+  ...
+# Subtest: Preset: size and exact format/version checks
+ok 24 - Preset: size and exact format/version checks
+  ---
+  duration_ms: 0.511386
+  type: 'test'
+  ...
+# Subtest: Theme mapping: zero radius and disabled motion retained; skin and dark defaults actual
+ok 25 - Theme mapping: zero radius and disabled motion retained; skin and dark defaults actual
+  ---
+  duration_ms: 0.916122
+  type: 'test'
+  ...
+# Subtest: Vue export: exact same preset and package entry; script delimiters are escaped
+ok 26 - Vue export: exact same preset and package entry; script delimiters are escaped
+  ---
+  duration_ms: 0.274012
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 100.32129

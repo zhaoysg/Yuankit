@@ -1,0 +1,24 @@
+
+> yuankit-workbench@0.5.0 audit:packages
+> node scripts/audit-packages.mjs
+
+[
+  {
+    "file": "releases/zhaoysg-yuankit-tokens-0.5.0.tgz",
+    "bytes": 3737,
+    "sha256": "09d50678ff8c2f8b243bab161ea04b9fd534412c4883e2ce097968bf480a85c0",
+    "entries": 8,
+    "relativeImportsVerified": 0,
+    "noBundledVue": true,
+    "noNodeModulesOrVendorOrDotEnv": true
+  },
+  {
+    "file": "releases/zhaoysg-yuankit-vue-0.5.0.tgz",
+    "bytes": 204609,
+    "sha256": "d4a561acabca997e4707213268444256bf05a4a90dac18f9f1a3364422d6c0b4",
+    "entries": 220,
+    "relativeImportsVerified": 250,
+    "noBundledVue": true,
+    "noNodeModulesOrVendorOrDotEnv": true
+  }
+]

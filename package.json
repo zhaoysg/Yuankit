@@ -1,0 +1,26 @@
+{
+  "name": "yuankit-workbench",
+  "version": "0.5.0",
+  "private": true,
+  "description": "YuanKit — owned Vue components, design tokens and reusable patterns",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:browser": "python tests/browser/run.py && python tests/browser/studio.py && python tests/browser/v05.py",
+    "check": "npm run build && npm test",
+    "new:component": "node scripts/new-component.mjs",
+    "pack:ui": "npm pack ./packages/vue --pack-destination releases",
+    "pack:tokens": "npm pack ./packages/tokens --pack-destination releases",
+    "test:studio": "python tests/browser/studio.py",
+    "audit:packages": "node scripts/audit-packages.mjs",
+    "test:v05": "python tests/browser/v05.py"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

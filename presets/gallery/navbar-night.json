@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "navbar",
+  "settings": {
+    "mode": "dark",
+    "primary": "#b4a5f3",
+    "surface": "#202029",
+    "text": "#efedf5",
+    "border": "#474450",
+    "radius": 14,
+    "shadow": 0
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

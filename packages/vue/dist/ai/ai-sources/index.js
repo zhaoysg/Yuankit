@@ -1,0 +1,3 @@
+import {defineComponent,h} from 'vue';
+import {safeWebUrl} from '../../shared/safety.js';
+export const YkAISources=defineComponent({name:'YkAISources',props:{items:{type:Array,default:()=>[]},label:{type:String,default:'参考来源'},defaultOpen:{type:Boolean,default:true}},setup(p){return()=>h('details',{class:'yk-ai-sources',open:p.defaultOpen},[h('summary',{},[p.label,h('span',{},p.items.length)]),h('ol',{},p.items.map((item,i)=>{const url=safeWebUrl(item.url);return h('li',{key:item.id},[h('span',{class:'yk-ai-sources__index'},i+1),h('div',{},[url?h('a',{href:url,target:'_blank',rel:'noopener noreferrer'},item.title+' ↗'):h('strong',{},item.title),h('small',{},url?new URL(url).hostname:'链接不可用'),item.description?h('p',{},item.description):null])]);}))]);}});

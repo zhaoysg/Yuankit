@@ -1,0 +1,1 @@
+.yk-separator { flex-shrink:0;background:var(--yk-border); }.yk-separator--horizontal { height:1px;width:100%;margin:16px 0; }.yk-separator--vertical { width:1px;align-self:stretch;min-height:20px;margin:0 12px; }

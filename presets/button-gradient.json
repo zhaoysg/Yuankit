@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.3.0",
+  "asset": "button",
+  "settings": {
+    "radius": 24,
+    "gradient": true,
+    "primary": "#6750d8",
+    "gradientEnd": "#c250a6",
+    "label": "开启你的设计",
+    "effect": "lift",
+    "hoverLift": 4
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}

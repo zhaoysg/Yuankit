@@ -1,0 +1,19 @@
+{
+  "version": "0.5.0",
+  "date": "2026-09-12T08:11:41.039854+00:00",
+  "checks": [
+    {
+      "mode": "in-memory",
+      "status": "passed",
+      "externalRequests": [],
+      "pageErrors": []
+    },
+    {
+      "mode": "file-origin",
+      "status": "not-verified",
+      "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///mnt/data/yuankit-v05-work/yuankit/preview-ai.html\nCall log:\n  - navigating to \"file:///mnt/data/yuankit-v05-work/yuankit/preview-ai.html\", waiting until \"domcontentloaded\"\n",
+      "pageErrors": []
+    }
+  ],
+  "browser": "144.0.7559.96"
+}

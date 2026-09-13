@@ -1,0 +1,26 @@
+{
+  "implementation": "packages/vue/src/effects/style.css",
+  "effects": [
+    "none",
+    "lift",
+    "glow",
+    "shine",
+    "fade",
+    "slide",
+    "scale",
+    "shimmer",
+    "pulse",
+    "reveal",
+    "stagger",
+    "spring",
+    "float",
+    "bounce",
+    "rotate",
+    "blur",
+    "gradient",
+    "parallax",
+    "marquee"
+  ],
+  "respectsReducedMotion": true,
+  "scope": "仅在支持 effect 字段的资产上开放；渐变为背景选项"
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "0.5.0",
+  "asset": "input",
+  "settings": {
+    "radius": 20,
+    "primary": "#a63c63",
+    "surface": "#fff7fa",
+    "text": "#37232b"
+  },
+  "designSystem": {
+    "global": {},
+    "components": {}
+  }
+}
